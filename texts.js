@@ -31,7 +31,7 @@ const siteTexts = {
       },
       {
         title: "Cuanto más alto llegás, más solo se siente.",
-        text: "Hay cada vez menos personas que realmente entiendan lo que implica estar donde estás. No es falta de gente. Es falta de personas que hablen tu idioma, que entiendan la presión, las decisiones difíciles y con quienes no tengas que tenerlo todo claro antes de hablar."
+        text: "Hay cada vez menos personas que realmente entiendan lo que implica estar donde estás. No encontras personas que hablen tu idioma, que entiendan la presión, las decisiones difíciles y con quienes no tengas que tenerlo todo claro."
       },
       {
         title: "Sostenés mucho. ¿Quién te sostiene a vos?",
@@ -64,13 +64,13 @@ const siteTexts = {
     lbl: "Antes de seguir",
     h2: "¿Sos la persona correcta para este proceso?",
     p: "Trabajo con personas que quieren ir a fondo, no con quienes buscan una solución rápida. Si llegaste hasta acá leyendo, algo me dice que sos de las primeras.",
-    yesTitle: "Sí es para vos si...",
+    yesTitle: "Es para vos si...",
     yesItems: [
       "Sos líder, emprendedor o profesional y algo por dentro no termina de cerrar.",
-      "Vivís acelerado, rendís bien, pero llegás vacío. Y ya no recordás cuándo fue distinto.",
+      "Vivís acelerado, rendís bien, pero llegás vacío, y ya no recordás cuándo fue distinto.",
       "Pasaste o buscás una transición de carrera, de rol o de vida.",
       "Querés entender por qué hay patrones que se repiten.",
-      "Estás dispuesto a incomodarte si eso significa salir del loop.",
+      "Aunque eso signifique incomodarte para salir del loop.",
       "Buscás a alguien que hable tu idioma, que entienda la presión, las decisiones difíciles y lo que implica liderar o emprender de verdad."
     ],
     noTitle: "No es para vos si...",
@@ -156,7 +156,7 @@ const siteTexts = {
     items: [
       { q: "¿Esto es para personas que están pasándola mal?", a: "No necesariamente. Muchos de los profesionales que acompaño funcionan bien, tienen logros y aun así sienten que hay algo más para trabajar. No hace falta estar en un mal momento para empezar. A veces alcanza con intuir que hay algo para entender mejor." },
       { q: "¿Para qué tipo de personas trabajás?", a: "Trabajo con adultos, líderes, emprendedores, freelancers y profesionales en general, que están atravesando un momento de cambio, estancamiento o búsqueda. Si te reconociste en algo de lo que leíste en esta página, probablemente sea para vos." },
-      { q: "¿Esto es terapia o coaching?", a: "Es psicología clínica. Profundidad para entender por qué te pasa lo que te pasa, dirección para que ese entender se traduzca en cambios concretos. No es coaching motivacional, no es autoayuda, no es técnicas sueltas. Es trabajo clínico con alguien que además conoce desde adentro el contexto profesional y de liderazgo en el que se mueve la mayoría de las personas que acompaño." },
+      { q: "¿Esto es terapia o coaching?", a: "Es psicología clínica. Profundidad para entender por qué te pasa lo que te pasa, dirección para que ese entender se traduzca en cambios concretos. No es coaching motivacional, no es autoayuda, no son técnicas sueltas. Es trabajo clínico con alguien que además conoce desde adentro el contexto profesional y de liderazgo en el que se mueve la mayoría de las personas que acompaño." },
       { q: "¿Cuánto tiempo lleva el proceso?", a: "Depende de cada caso. De la situación vital, personal y emocional en la que llegás. No hay fórmulas ni paquetes fijos. Lo que sí hay es un proceso honesto: avanzamos a la velocidad que tiene sentido para vos." },
       { q: "Ya hice terapia antes y no funcionó. ¿Por qué sería diferente?", a: "Porque la mayoría de los psicólogos conocen las organizaciones y los contextos de alta exigencia desde los libros. Yo los conocí desde adentro, como líder y como alguien que tomó las mismas decisiones que vos estás tomando hoy. Eso cambia el tipo de conversación que es posible tener, y el tipo de preguntas que te puedo hacer." },
       { q: "¿Cómo arrancamos?", a: "Agendás una sesión de 15 minutos (USD 10, sin compromiso posterior). Nos conocemos, te cuento cómo trabajo, me contás qué te está pasando, y desde ahí decidimos juntos si tiene sentido seguir." }
