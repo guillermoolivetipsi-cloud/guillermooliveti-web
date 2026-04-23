@@ -109,12 +109,8 @@
             height: 100%;
             object-fit: cover;
             object-position: 38% 30%;
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%),
-                                linear-gradient(to right, transparent 0%, rgba(0,0,0,0.05) 3%, black 15%, black 75%, transparent 100%);
-            -webkit-mask-composite: source-in;
-            mask-image: linear-gradient(to bottom, transparent 0%, black 8%),
-                        linear-gradient(to right, transparent 0%, rgba(0,0,0,0.05) 3%, black 15%, black 75%, transparent 100%);
-            mask-composite: intersect;
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.05) 3%, black 15%, black 75%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.05) 3%, black 15%, black 75%, transparent 100%);
         }
 
         .hero-text {
