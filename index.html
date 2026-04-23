@@ -2,6 +2,18 @@
 <html lang="es">
 
 <head>
+    <style>
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;border-top:1px solid #2a2a2a;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;z-index:9999;flex-wrap:wrap}
+#cookie-banner p{font-family:'Inter Tight',sans-serif;font-size:13px;color:#8a8279;line-height:1.6;margin:0;flex:1;min-width:220px}
+#cookie-banner p a{color:#ffaf34;text-decoration:none}
+#cookie-banner p a:hover{text-decoration:underline}
+.cookie-btns{display:flex;gap:0.8rem;flex-shrink:0}
+#cookie-accept{background:#ffaf34;color:#101010;border:none;padding:8px 18px;font-family:'Inter Tight',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.05em;cursor:pointer;border-radius:6px;transition:background 0.2s}
+#cookie-accept:hover{background:#ffd079}
+#cookie-reject{background:transparent;color:#8a8279;border:0.5px solid #3a3a3a;padding:8px 18px;font-family:'Inter Tight',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.05em;cursor:pointer;border-radius:6px;transition:all 0.2s}
+#cookie-reject:hover{border-color:#8a8279;color:#c8c2ba}
+@media(max-width:600px){#cookie-banner{flex-direction:column;align-items:flex-start;padding:1rem 1.5rem}.cookie-btns{width:100%}#cookie-accept,#cookie-reject{flex:1;text-align:center}}
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guillermo Oliveti — Psicología Clínica</title>
@@ -30,7 +42,7 @@
             <p style="font-size: 13px; margin-top: 0.75rem; opacity: 0.8;" data-t="hero.micro"></p>
         </div>
         <div class="hero-img">
-            <img src="images/foto_guille.jpeg" alt="Guillermo Oliveti">
+            <img src="images/Psicologo2.jpg" alt="Guillermo Oliveti">
         </div>
     </div>
 
@@ -410,6 +422,9 @@
 
     <footer>
         <p data-t="footer.copy"></p>
+        <a href="politica-privacidad.html" class="footer-li">Privacidad</a>
+        <a href="politica-cookies.html" class="footer-li">Cookies</a>
+        <a href="aviso-legal.html" class="footer-li">Aviso legal</a>
         <a href="https://www.linkedin.com/in/guillermo-oliveti-02299722/?locale=en" target="_blank" class="footer-li">
             <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
             <span data-t="footer.li"></span>
@@ -456,5 +471,50 @@
         }, { threshold: 0.5 });
         document.querySelectorAll('.sn[data-target]').forEach(function (el) { numObs.observe(el) });
     </script>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" style="display:none">
+  <p>Usamos cookies para analizar el tráfico y mejorar tu experiencia. Podés aceptar o rechazar su uso. <a href="politica-cookies.html">Política de cookies</a>.</p>
+  <div class="cookie-btns">
+    <button id="cookie-reject">Solo necesarias</button>
+    <button id="cookie-accept">Aceptar</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var consent = localStorage.getItem('cookie_consent');
+  if(!consent){
+    document.getElementById('cookie-banner').style.display='flex';
+  } else if(consent === 'accepted'){
+    loadAnalytics();
+  }
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookie_consent','accepted');
+    document.getElementById('cookie-banner').style.display='none';
+    loadAnalytics();
+  });
+  document.getElementById('cookie-reject').addEventListener('click', function(){
+    localStorage.setItem('cookie_consent','rejected');
+    document.getElementById('cookie-banner').style.display='none';
+  });
+  function loadAnalytics(){
+    if(window.gaLoaded) return;
+    window.gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HPS2H0E16F';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-HPS2H0E16F', {
+      anonymize_ip: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+  }
+})();
+</script>
 </body>
 </html>
