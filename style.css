@@ -214,7 +214,7 @@
 
         .sec {
             padding: 3rem 1.5rem;
-            max-width: 860px;
+            max-width: 1040px;
             margin: 0 auto;
             background: #101010;
         }
@@ -602,7 +602,7 @@
         }
 
         .emigrado-inner {
-            max-width: 860px;
+            max-width: 1040px;
             margin: 0 auto
         }
 
@@ -768,7 +768,7 @@
 
         .cta-outer {
             margin: 4rem auto;
-            max-width: 900px;
+            max-width: 1040px;
             padding: 4rem 3rem;
             text-align: center;
             background: linear-gradient(135deg, rgba(50,50,50,0.2) 0%, rgba(10,10,10,0.8) 100%);
@@ -916,7 +916,7 @@
             background: #101010;
             border: 1px solid #222;
             margin: 4rem auto;
-            max-width: 860px
+            max-width: 1040px
         }
 
         .cta-outer h2 {
