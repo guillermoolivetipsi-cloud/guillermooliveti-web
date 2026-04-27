@@ -1074,7 +1074,54 @@
             .nav {
                 padding: 1rem 1.5rem
             }
+
+            .car-item { flex: 0 0 100%; padding: 0; }
+            .car-btn { width: 28px; height: 28px; font-size: 14px; }
         }
+
+        /* CAROUSEL */
+        .car-outer { margin-top: 2rem; }
+        .car-wrap { display: flex; align-items: center; gap: 1rem; }
+        .car-viewport { flex: 1; overflow: hidden; min-width: 0; }
+        .car-track { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
+        .car-item { flex: 0 0 50%; padding: 0 0.5rem; box-sizing: border-box; display: flex; }
+        .car-item .tc {
+            border: 1px solid #222;
+            border-right: 1px solid #222;
+            border-bottom: 1px solid #222;
+            width: 100%;
+        }
+        .car-btn {
+            flex-shrink: 0;
+            background: transparent;
+            border: 0.5px solid #333;
+            color: #ffaf34;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.2s;
+            border-radius: 6px;
+            font-family: 'Inter Tight', sans-serif;
+            line-height: 1;
+        }
+        .car-btn:hover { border-color: #ffaf34; background: rgba(255,175,52,0.08); }
+        .car-dots { display: flex; justify-content: center; gap: 8px; margin-top: 1.5rem; }
+        .car-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #333;
+            cursor: pointer;
+            transition: background 0.2s;
+            border: none;
+            padding: 0;
+            display: inline-block;
+        }
+        .car-dot.active { background: #ffaf34; }
 
         @media(max-width:500px) {
             .nav-cta {
