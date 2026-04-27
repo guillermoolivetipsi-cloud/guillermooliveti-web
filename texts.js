@@ -102,7 +102,7 @@ const siteTexts = {
     p2: "En paralelo, armé una carrera corporativa de 18 años. Los últimos 14 liderando equipos, los últimos 7 como director operativo. En el medio acompañé a más de 40 líderes en su desarrollo, desde adentro, no desde la teoría. Hace dos meses dejé el rol corporativo para dedicarme full time a la clínica.",
     p3: "Lo que en su momento parecían dos mundos opuestos terminó siendo exactamente lo que hoy te puedo ofrecer: profundidad clínica con formación en psicoanálisis y terapia cognitivo-conductual, más comprensión real del contexto profesional en el que se mueve la mayoría de las personas que acompaño. No tenés que explicarme tu contexto antes de empezar a trabajar sobre vos.",
     quote: "Cuando el que te escucha estuvo en la misma silla, la conversación es otra.",
-    scarcity: "No soy un consultorio de volumen. Elijo trabajar con pocos casos, bien elegidos, para poder darle a cada uno tiempo, atención y profundidad real. Eso es parte de la diferencia."
+    scarcity: "No soy un consultorio de volumen. Elijo trabajar con pocos casos para poder darle a cada uno el tiempo, la atención y la profundidad que el trabajo clínico real necesita."
   },
   emigrado: {
     lbl: "Si además emigraste",
