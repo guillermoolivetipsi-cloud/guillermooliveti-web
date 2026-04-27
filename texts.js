@@ -66,19 +66,15 @@ const siteTexts = {
     p: "Trabajo con personas que quieren ir a fondo, no con quienes buscan una solución rápida. Si llegaste hasta acá leyendo, algo me dice que sos de las primeras.",
     yesTitle: "Es para vos si...",
     yesItems: [
+      "Buscás a alguien que hable tu idioma, que entienda la presión, las decisiones difíciles y lo que implica liderar o emprender de verdad.",
       "Sos líder, emprendedor o profesional y algo por dentro no termina de cerrar.",
-      "Vivís acelerado, rendís bien, pero llegás vacío, y ya no recordás cuándo fue distinto.",
-      "Pasaste o buscás una transición de carrera, de rol o de vida.",
-      "Querés entender por qué hay patrones que se repiten.",
-      "Aunque eso signifique incomodarte para salir del loop.",
-      "Buscás a alguien que hable tu idioma, que entienda la presión, las decisiones difíciles y lo que implica liderar o emprender de verdad."
+      "Vivís acelerado, rendís bien, pero llegás vacío. Y ya no recordás cuándo fue distinto.",
+      "Pasaste o buscás una transición de carrera, de rol o de vida."
     ],
     noTitle: "No es para vos si...",
     noItems: [
       "Esperás resultados visibles en dos o tres sesiones.",
-      "Buscás que alguien te confirme lo que ya decidiste.",
       "No estás dispuesto a incomodarte en el proceso.",
-      "Buscás un coach motivacional que te suba el ánimo cada semana.",
       "Querés técnicas rápidas sin entender qué hay detrás del patrón."
     ]
   },
@@ -105,9 +101,9 @@ const siteTexts = {
     scarcity: "No soy un consultorio de volumen. Elijo trabajar con pocos casos para poder darle a cada uno el tiempo, la atención y la profundidad que el trabajo clínico real necesita."
   },
   emigrado: {
-    lbl: "Si además emigraste",
-    frase: "Hay una capa más.<br>Y la conozco<br><em>porque la viví.</em>",
-    sub: "Migrar no es solo cambiar de país. Es reconstruir quién sos en un mapa nuevo. Y ese proceso tiene un costo interno real, pero también puede ser un momento de crecimiento personal y profesional.",
+    lbl: "Si vivís fuera de tu país",
+    frase: "Instalarse en otro país es una cosa.<br>Acomodarse por dentro<br><em>es otra.</em>",
+    sub: "Hay una capa más. Y la conozco porque la viví. Migrar no es solo cambiar de país. Es reconstruir quién sos en un mapa nuevo. Y ese proceso tiene un costo interno real, pero también puede ser un momento de crecimiento personal y profesional.",
     cards: [
         { title: "El duelo que no tiene nombre.", text: "Dejaste personas, lugares, una identidad construida. Ese duelo existe aunque hayas elegido irte." },
         { title: "Identidad en suspenso.", text: "¿Sos el que eras allá o ya sos otro? El nuevo contexto te obliga a reconstruirte y no sabés cómo empezar." },
