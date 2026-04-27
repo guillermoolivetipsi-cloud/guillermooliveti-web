@@ -95,7 +95,7 @@ const siteTexts = {
     linkedin: "Ver perfil en LinkedIn",
     h2: "Conozco desde adentro<br>lo que estás atravesando.",
     p1: "El mismo día que me recibí de ingeniero en sistemas, tomé el tren hasta la facultad de psicología y me anoté. No al mes siguiente. Ese mismo día. Me apasionaba entender cómo funciona la mente humana, por qué hacemos lo que hacemos, por qué repetimos lo que repetimos, y necesitaba estudiarlo a fondo.",
-    p2: "En paralelo, armé una carrera corporativa de 18 años. Los últimos 14 liderando equipos, los últimos 7 como director operativo. En el medio acompañé a más de 40 líderes en su desarrollo, desde adentro, no desde la teoría. Hace dos meses dejé el rol corporativo para dedicarme full time a la clínica.",
+    p2: "En paralelo, armé una carrera corporativa de 18 años. Los últimos 14 liderando equipos, los últimos 7 como director operativo. En el medio acompañé a más de 40 líderes en su desarrollo, desde adentro, no desde la teoría. Llegó un momento en que decidí dejar ese rol para dedicarme 100% a la clínica.",
     p3: "Lo que en su momento parecían dos mundos opuestos terminó siendo exactamente lo que hoy te puedo ofrecer: profundidad clínica con formación en psicoanálisis y terapia cognitivo-conductual, más comprensión real del contexto profesional en el que se mueve la mayoría de las personas que acompaño. No tenés que explicarme tu contexto antes de empezar a trabajar sobre vos.",
     quote: "Cuando el que te escucha estuvo en la misma silla, la conversación es otra.",
     scarcity: "No soy un consultorio de volumen. Elijo trabajar con pocos casos para poder darle a cada uno el tiempo, la atención y la profundidad que el trabajo clínico real necesita."
