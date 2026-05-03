@@ -421,6 +421,21 @@
             background: transparent
         }
 
+        .transition-quote {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        .transition-quote p {
+            font-family: Georgia, serif;
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-style: italic;
+            font-weight: 300;
+            color: #e8e2d9;
+            line-height: 1.6;
+        }
+
         .lossbox {
             border-left: 2px solid #ffaf34;
             padding: 1.8rem 2rem;
