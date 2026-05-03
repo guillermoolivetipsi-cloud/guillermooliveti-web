@@ -8,8 +8,8 @@ const siteTexts = {
     tag: "Psicología clínica · Online",
     h1: "El profesional que querés<br>ser empieza por entender<br><em>quién sos.</em>",
     sub: "Acompaño a personas que quieren desarrollarse, entender qué las frena y construir una versión de sí mismas más alineada con sus valores y con quiénes quieren ser.",
-    btn: "Agendá tu sesión de 15 minutos",
-    micro: "15 minutos · USD 10 · Sin compromiso posterior"
+    btn: "Agendemos una conversación",
+    micro: "Si llegaste hasta acá, algo tiene sentido explorar."
   },
   donde: {
     lbl: "¿Dónde estás hoy?",
@@ -80,9 +80,9 @@ const siteTexts = {
   },
   ctaMid: {
     h2: "Cada conversación es el comienzo de algo.<br>Esta puede ser la tuya.",
-    p: "El primer paso es una conversación. Sin compromisos, sin presión.",
+    p: "Si llegaste hasta acá, algo tiene sentido explorar.",
     c15: "<strong>✓ 15 minutos · USD 10 · Sin compromiso</strong>",
-    btn: "Agendá tu sesión de 15 minutos"
+    btn: "Agendemos una conversación"
   },
   about: {
     lbl: "Por qué yo",
@@ -113,8 +113,8 @@ const siteTexts = {
     edifQuote: "Las primeras semanas fueron increíbles. Después llegó el peso real: pieza compartida en vez de mi departamento propio, amigos a más de 10.000 kilómetros, una tesis de psicología por terminar y la pregunta que no se me iba: ¿es una locura lo que estoy haciendo? ¿por qué estoy resignando mi vida cómoda por esto?",
     edifSpan: "Cinco años después, sé que del otro lado se llega. Pero sé cómo se siente estar del lado en el que la pregunta todavía duele.",
     transition: "No hace falta tenerlo todo claro para dar el primer paso. Una conversación de 15 minutos alcanza para empezar.",
-    btn: "Agendá tu sesión de 15 minutos",
-    micro: "15 minutos · USD 10 · Sin compromiso posterior"
+    btn: "Agendemos una conversación",
+    micro: "Si llegaste hasta acá, algo tiene sentido explorar."
   },
   lograr: {
     lbl: "¿Qué buscamos lograr?",
