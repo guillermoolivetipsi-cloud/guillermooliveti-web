@@ -143,7 +143,8 @@ const siteTexts = {
         { av: "VA", n: "Vanesa", r: "Líder funcional", s: "★★★★★", t: "\"En este período logré evolucionar en mi desempeño como líder funcional, impulsando la estandarización de procesos, fortaleciendo la gestión del equipo y consolidando un estilo de liderazgo más efectivo.\"" },
         { av: "SO", n: "Sofía", r: "Responsable de Finanzas", s: "★★★★★", t: "\"Guille demuestra su profesionalismo y dedicación en cada sesión, y genera un espacio de confianza cálido y muy cómodo. Sin dudas lo recomiendo.\"" },
         { av: "AG", n: "Agustín", r: "Responsable de equipo de QA", s: "★★★★★", t: "\"Fui paciente de Guillermo por 5 meses. Puedo destacar los resultados obtenidos, demostrando increíble dedicación y siempre abogando por la mejoría del paciente.\"" },
-        { av: "CA", n: "Catherine", r: "Desarrolladora de Software", s: "★★★★★", t: "\"Me ayudaste muchísimo a identificar muchas cosas que me hacían mal y creía que la del problema era yo. Gracias infinitas por estos meses de terapia.\"" }
+        { av: "CA", n: "Catherine", r: "Desarrolladora de Software", s: "★★★★★", t: "\"Me ayudaste muchísimo a identificar muchas cosas que me hacían mal y creía que la del problema era yo. Gracias infinitas por estos meses de terapia.\"" },
+        { av: "MA", n: "Mariano", r: "CEO de Kiltex", s: "★★★★★", t: "\"Tuve una excelente experiencia con Guillermo. La consulta superó mis expectativas y me resultó de muchísima utilidad para clarificar lo que me estaba pasando. Destaco su capacidad para analizar los temas con profundidad y profesionalismo. Es un espacio de gran valor que recomiendo ampliamente.\"" }
     ]
   },
   faq: {
