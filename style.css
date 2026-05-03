@@ -149,6 +149,11 @@
             color: #ffaf34
         }
 
+        .hero h1 em {
+            color: #ffaf34;
+            font-style: normal;
+        }
+
         .hsub {
             font-family: 'Inter Tight', sans-serif;
             font-size: clamp(14px, 1rem + 0.5vw, 16px);

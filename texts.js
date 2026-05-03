@@ -6,7 +6,7 @@ const siteTexts = {
   },
   hero: {
     tag: "Psicología clínica · Online",
-    h1: "El profesional que querés ser empieza por entenderte.<br>Y eso cambia cuando hablás con alguien<br>que estuvo donde estás vos.",
+    h1: "El profesional que querés ser empieza por <em>entenderte</em>. Yo estuve donde estás vos.",
     sub: "Acompaño a personas que quieren desarrollarse, entender qué las frena y construir una versión de sí mismas más alineada con sus valores y con quiénes quieren ser.",
     btn: "Agendemos una conversación",
     micro: "Si llegaste hasta acá, algo tiene sentido explorar."
