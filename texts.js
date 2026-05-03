@@ -6,7 +6,7 @@ const siteTexts = {
   },
   hero: {
     tag: "Psicología clínica · Online",
-    h1: "El profesional que querés<br>ser empieza por entender<br><em>quién sos.</em>",
+    h1: "El profesional que querés ser empieza por entenderte.<br>Y eso cambia cuando hablás con alguien<br>que estuvo donde estás vos.",
     sub: "Acompaño a personas que quieren desarrollarse, entender qué las frena y construir una versión de sí mismas más alineada con sus valores y con quiénes quieren ser.",
     btn: "Agendemos una conversación",
     micro: "Si llegaste hasta acá, algo tiene sentido explorar."
@@ -80,6 +80,7 @@ const siteTexts = {
   },
   ctaMid: {
     h2: "Cada conversación es el comienzo de algo.<br>Esta puede ser la tuya.",
+    quote: "El profesional que querés ser empieza por entender quién sos.",
     p: "Si llegaste hasta acá, algo tiene sentido explorar.",
     c15: "<strong>✓ 15 minutos · USD 10 · Sin compromiso</strong>",
     btn: "Agendemos una conversación"
@@ -110,8 +111,8 @@ const siteTexts = {
         { title: "No hay espacio para dudar.", text: "Te fuiste con un propósito. Y cuestionar si fue la decisión correcta se siente como una traición a todo lo que dejaste atrás." },
         { title: "Te integraste. Pero algo falta.", text: "Aprendiste a moverte en el nuevo contexto, tenés tu círculo. Y aun así, hay una soledad que no desaparece." }
     ],
-    edifQuote: "Las primeras semanas fueron increíbles. Después llegó el peso real: pieza compartida en vez de mi departamento propio, amigos a más de 10.000 kilómetros, una tesis de psicología por terminar y la pregunta que no se me iba: ¿es una locura lo que estoy haciendo? ¿por qué estoy resignando mi vida cómoda por esto?",
-    edifSpan: "Cinco años después, sé que del otro lado se llega. Pero sé cómo se siente estar del lado en el que la pregunta todavía duele.",
+    edifQuote: "Las primeras semanas fueron increíbles. Después llegó el peso real: lejos de mi familia, lejos de mis amigos, una tesis de psicología por terminar y la pregunta que no se me iba: ¿es una locura lo que estoy haciendo? ¿por qué estoy resignando mi vida cómoda por esto?",
+    edifSpan: "Cinco años después, sé que del otro lado se llega. El camino a veces es difícil, pero también sé que es más liviano cuando alguien te acompaña.",
     transition: "No hace falta tenerlo todo claro para dar el primer paso. Una conversación de 15 minutos alcanza para empezar.",
     btn: "Agendemos una conversación",
     micro: "Si llegaste hasta acá, algo tiene sentido explorar."

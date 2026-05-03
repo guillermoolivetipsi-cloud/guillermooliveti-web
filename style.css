@@ -135,7 +135,7 @@
         }
 
         h1 {
-            font-size: clamp(2.2rem, 3.5vw, 3.8rem);
+            font-size: clamp(1.6rem, 3.5vw, 3.8rem);
             font-weight: 300;
             line-height: 1.05;
             margin-bottom: 1rem;
@@ -1283,6 +1283,15 @@
             color: #f0ece4;
             margin-bottom: 0.75rem;
             letter-spacing: -0.02em;
+        }
+        .contact-quote {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #e8e2d9;
+            line-height: 1.6;
+            font-weight: 300;
+            margin-bottom: 0.6rem;
         }
         .contact-sub {
             font-size: 15px;
