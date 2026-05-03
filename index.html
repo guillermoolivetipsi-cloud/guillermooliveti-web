@@ -421,20 +421,12 @@
 
     <div class="div"></div>
 
-    <div class="cta-outer fade-in">
-        <h2 data-t="ctaMid.h2"></h2>
-        <p class="cta-p" data-t="ctaMid.p"></p>
-        <p class="cta-15" data-t="ctaMid.c15"></p>
-        <a href="#contacto" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'}); return false;" class="btn" data-t="ctaMid.btn"></a>
-    </div>
-
-    <div class="div"></div>
-
     <!-- SECCIÓN FORMULARIO DE CONTACTO -->
     <section id="contacto" class="section-contact">
       <div class="sec">
         <p class="lbl">Contacto</p>
-        <h2 class="contact-title">Contame brevemente qué te trajo por acá.</h2>
+        <h2 class="contact-title" data-t="ctaMid.h2"></h2>
+        <p class="contact-sub" data-t="ctaMid.p"></p>
 
         <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="6f19ae7f-4534-4355-9f3e-f03092177150">
@@ -467,9 +459,11 @@
             <textarea id="mensaje" name="mensaje" required rows="5" placeholder="Podés escribir lo que quieras. No hay respuestas correctas."></textarea>
           </div>
 
-          <button type="submit" class="btn-submit" id="submit-btn">
-            Enviar — te escribo en menos de 48 horas
-          </button>
+          <button type="submit" class="btn-submit" id="submit-btn">Enviar</button>
+          <div class="form-below-btn">
+            <p class="form-48h">Te escribo en menos de 48 horas.</p>
+            <p class="form-badge" data-t="ctaMid.c15"></p>
+          </div>
 
           <p id="form-success" style="display:none; color:#b8963e; margin-top:1rem;">
             Gracias. Te escribo en menos de 48 horas.
@@ -499,7 +493,7 @@
           document.getElementById('form-success').style.display = 'block';
           document.getElementById('form-error').style.display = 'none';
           this.reset();
-          btn.textContent = 'Enviado';
+          btn.textContent = 'Enviado ✓';
         } else {
           throw new Error('Error');
         }
@@ -507,7 +501,7 @@
         document.getElementById('form-error').style.display = 'block';
         document.getElementById('form-success').style.display = 'none';
         btn.disabled = false;
-        btn.textContent = 'Enviar — te escribo en menos de 48 horas';
+        btn.textContent = 'Enviar';
       }
     });
     </script>
