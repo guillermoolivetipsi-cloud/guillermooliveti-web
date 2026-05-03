@@ -143,6 +143,7 @@ const siteTexts = {
         { av: "JU", n: "Julieta", r: "Líder de Proyectos", s: "★★★★★", t: "\"Empecé buscando entender por qué me sentía estancada a pesar de tener todo aparentemente «en orden». Me había analizado antes y sentía que no terminaba de ayudarme. Lo que cambió con Guillermo fue que me entendí mejor y empecé a tomar otras decisiones en mi vida. Lo más valioso fue encontrar las preguntas correctas. Sigo trabajando con él y me sigue ayudando mucho.\"" },
         { av: "VA", n: "Vanesa", r: "Líder funcional", s: "★★★★★", t: "\"En este período logré evolucionar en mi desempeño como líder funcional, impulsando la estandarización de procesos, fortaleciendo la gestión del equipo y consolidando un estilo de liderazgo más efectivo.\"" },
         { av: "SO", n: "Sofía", r: "Responsable de Finanzas", s: "★★★★★", t: "\"Guille demuestra su profesionalismo y dedicación en cada sesión, y genera un espacio de confianza cálido y muy cómodo. Sin dudas lo recomiendo.\"" },
+        { av: "AG", n: "Agustín", r: "Responsable de equipo de QA", s: "★★★★★", t: "\"Fui paciente de Guillermo por 5 meses. Puedo destacar los resultados obtenidos, demostrando increíble dedicación y siempre abogando por la mejoría del paciente.\"" },
         { av: "CA", n: "Catherine", r: "Desarrolladora de Software", s: "★★★★★", t: "\"Me ayudaste muchísimo a identificar muchas cosas que me hacían mal y creía que la del problema era yo. Gracias infinitas por estos meses de terapia.\"" }
     ]
   },
