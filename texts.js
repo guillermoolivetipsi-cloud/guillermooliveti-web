@@ -9,7 +9,7 @@ const siteTexts = {
     h1: "El profesional que querés ser empieza por <em>entenderte</em>.<br>Yo estuve donde vos estás.",
     sub: "Acompaño a personas que quieren desarrollarse, entender qué las frena y construir una versión de sí mismas más alineada con sus valores y con quiénes quieren ser.",
     btn: "Agendemos una conversación",
-    micro: "Si llegaste hasta acá, algo tiene sentido explorar."
+    micro: ""
   },
   donde: {
     lbl: "¿Dónde estás hoy?",
