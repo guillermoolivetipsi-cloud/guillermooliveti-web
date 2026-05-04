@@ -1333,7 +1333,7 @@
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 0.06em;
-            color: #b8963e;
+            color: #ffaf34;
         }
         .form-group {
             margin-bottom: 1.5rem;
@@ -1372,14 +1372,14 @@
         }
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: #b8963e;
+            border-color: #ffaf34;
         }
         .form-group textarea {
             resize: vertical;
             min-height: 120px;
         }
         .btn-submit {
-            background: #b8963e;
+            background: #ffaf34;
             color: #101010;
             border: none;
             padding: 1rem 2rem;
@@ -1394,7 +1394,7 @@
             margin-top: 0.5rem;
         }
         .btn-submit:hover {
-            background: #d4a94a;
+            background: #ffd079;
         }
         .btn-submit:disabled {
             opacity: 0.6;
