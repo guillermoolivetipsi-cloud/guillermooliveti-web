@@ -2,7 +2,7 @@ const siteTexts = {
   nav: {
     logoFirst: "Guillermo ",
     logoSpan: "Oliveti",
-    btn: "Agendá tu sesión"
+    btn: "Agendemos una conversación"
   },
   hero: {
     tag: "Psicología clínica · Online",
