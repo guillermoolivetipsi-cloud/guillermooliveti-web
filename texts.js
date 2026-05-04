@@ -6,7 +6,7 @@ const siteTexts = {
   },
   hero: {
     tag: "Psicología clínica · Online",
-    h1: "Tu desarrollo profesional y personal están <em>MUY</em> conectados:<br>Este es el espacio para trabajarlos.",
+    h1: "Tu desarrollo profesional y personal están <em>MUY</em> conectados:<br>este es el espacio para trabajarlos.",
     sub: "Acompaño a personas que quieren desarrollarse, entender qué las frena y construir una versión de sí mismas más alineada con sus valores y con quiénes quieren ser.",
     btn: "Agendemos una conversación",
     micro: ""
