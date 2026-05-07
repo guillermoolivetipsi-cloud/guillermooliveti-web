@@ -157,7 +157,7 @@ const siteTexts = {
       { q: "¿Esto es terapia o coaching?", a: "Es psicología clínica. Profundidad para entender por qué te pasa lo que te pasa, dirección para que ese entender se traduzca en cambios concretos. No es coaching motivacional, no es autoayuda, no son técnicas sueltas. Es trabajo clínico con alguien que además conoce desde adentro el contexto profesional y de liderazgo en el que se mueve la mayoría de las personas que acompaño." },
       { q: "¿Cuánto tiempo lleva el proceso?", a: "Depende de cada caso. De la situación vital, personal y emocional en la que llegás. No hay fórmulas ni paquetes fijos. Lo que sí hay es un proceso honesto: avanzamos a la velocidad que tiene sentido para vos." },
       { q: "Ya hice terapia antes y no funcionó. ¿Por qué sería diferente?", a: "Porque la mayoría de los psicólogos conocen las organizaciones y los contextos de alta exigencia desde los libros. Yo los conocí desde adentro, como líder y como alguien que tomó las mismas decisiones que vos estás tomando hoy. Eso cambia el tipo de conversación que es posible tener, y el tipo de preguntas que te puedo hacer." },
-      { q: "¿Cómo arrancamos?", a: "Agendás una sesión de 15 minutos (USD 10, sin compromiso posterior). Nos conocemos, te cuento cómo trabajo, me contás qué te está pasando, y desde ahí decidimos juntos si tiene sentido seguir." }
+      { q: "¿Cómo arrancamos?", a: "Completá el formulario. Nos conocemos, te cuento cómo trabajo, me contás qué te está pasando, y desde ahí decidimos juntos si tiene sentido seguir." }
     ]
   },
   neo: {
