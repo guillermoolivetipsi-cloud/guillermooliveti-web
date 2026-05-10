@@ -728,6 +728,9 @@ document.addEventListener('click', function(e){
 
 <script>
 (function(){
+  /* COOKIES DESACTIVADAS TEMPORALMENTE */
+  loadAnalytics();
+  return;
   var consent = localStorage.getItem('cookie_consent');
   if(!consent){
     document.getElementById('cookie-banner').style.display='flex';
