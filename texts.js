@@ -49,7 +49,6 @@ const siteTexts = {
       "Crisis laboral o vital",
       "Ansiedad",
       "Dificultad para delegar",
-      "Conflictos vinculares",
       "Procrastinación",
       "Burnout silencioso",
       "Dificultad para poner límites",
