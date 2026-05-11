@@ -396,12 +396,12 @@
 
         .tags-intro {
             font-family: 'Inter Tight', sans-serif;
-            font-size: clamp(14px, 1rem + 0.5vw, 16px);
-            color: #8a8279;
-            margin-top: 3.5rem;
+            font-size: clamp(15px, 1rem + 0.5vw, 17px);
+            color: #e8e2d9;
+            margin-top: 0;
             margin-bottom: 1.5rem;
             letter-spacing: 0.02em;
-            font-weight: 400
+            font-weight: 500
         }
 
         .tags {
@@ -414,11 +414,11 @@
         .tag-pill {
             font-family: 'Inter Tight', sans-serif;
             font-size: 13px;
-            color: #8a8279;
-            border: 1px solid #333;
+            color: #c8c2ba;
+            border: 1px solid #444;
             padding: 8px 16px;
             border-radius: 6px;
-            background: transparent
+            background: #1a1a1a
         }
 
         .transition-quote {

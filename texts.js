@@ -15,7 +15,7 @@ const siteTexts = {
     lbl: "¿Dónde estás hoy?",
     h2: "Reconocerte es el primer paso.",
     p: "Las personas que más se desarrollan no solo trabajan sus habilidades. Trabajan su mundo interno, sus patrones, sus vínculos y cómo su historia personal impacta en cada decisión que toman. Eso es lo que marca la diferencia.",
-    banner: "<strong>No hay desarrollo profesional real sin desarrollo personal. Son la misma cosa.</strong>",
+    banner: "",
     cards: [
       {
         title: "Algo no encaja.",
