@@ -655,10 +655,10 @@
             border-top: 1px solid #222;
             border-bottom: 1px solid #222;
             background: transparent;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
+            padding: 3rem 0 3rem 2.5rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
             border-left: 2px solid #ffaf34;
-            padding-left: 2rem
         }
 
         .edif p {
@@ -666,8 +666,8 @@
             font-size: 1.2rem;
             font-style: italic;
             color: #e8e2d9;
-            line-height: 1.7;
-            margin-bottom: 0.8rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
             font-weight: 400
         }
 
@@ -684,7 +684,7 @@
             font-size: clamp(14px, 1rem + 0.5vw, 16px);
             color: #8a8279;
             line-height: 1.8;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             font-weight: 300
         }
 
