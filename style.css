@@ -688,23 +688,22 @@
         }
 
         .yque-cierre {
-            margin-top: 3rem;
-            padding: 2rem 2.5rem;
-            border-left: 2px solid #ffaf34;
+            max-width: 1040px;
+            margin: 3rem auto 0;
+            padding: 0;
+            text-align: center;
             background: transparent;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-            border-right: 1px solid #222
+            border: none;
         }
 
         .yque-cierre p {
             font-family: Georgia, serif;
-            font-size: 1.2rem;
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
             font-style: italic;
             color: #e8e2d9;
-            line-height: 1.8;
-            font-weight: 400;
-            margin: 0
+            line-height: 1.6;
+            font-weight: 300;
+            margin: 0;
         }
 
         .tgrid {
