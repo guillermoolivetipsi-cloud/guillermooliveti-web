@@ -44,6 +44,7 @@ const siteTexts = {
     ],
     bannerInf: "",
     tagsIntro: "Algunas de las cosas que trabajamos:",
+    cardsIntro: "Sentís que:",
     tags: [
       "Crisis laboral o vital",
       "Ansiedad",
