@@ -80,7 +80,7 @@ const siteTexts = {
     ]
   },
   ctaMid: {
-    h2: "Cada conversación es el comienzo de algo.<br>Esta puede ser la tuya.",
+    h2: "Si llegaste hasta acá y algo resonó,<br>el siguiente paso es conocernos.",
     quote: "El profesional que querés ser empieza por entender quién sos.",
     p: "Si llegaste hasta acá, algo tiene sentido explorar.",
     c15: "<strong>✓ 15 minutos · USD 10 · Sin compromiso</strong>",
