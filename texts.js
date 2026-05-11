@@ -165,7 +165,7 @@ const siteTexts = {
     logo1: "Neo",
     logo2: "Psy",
     tag: "Un ritual semanal para pensar mejor",
-    p1: "¿Todavía no estás listo para una primera sesión? Suscribite al newsletter.<br><br>Cada semana escribo sobre psicología, neurociencia y desarrollo, sin recetas motivacionales, sin contenido de relleno. Es la puerta de entrada más suave a mi forma de trabajar, y muchas de las personas que hoy son pacientes llegaron por ahí.",
+    p1: "Cada semana escribo sobre psicología, neurociencia y desarrollo, sin recetas motivacionales, sin contenido de relleno. Una forma distinta de acercarte a cómo entiendo la psicología y el desarrollo.",
     p2: "Blog + Newsletter semanal",
     btn: "Suscribirme al newsletter"
   },
