@@ -58,7 +58,7 @@ const siteTexts = {
       "Miedo al fracaso",
       "Autosabotaje"
     ],
-    lossbox: "El crecimiento real empieza cuando te entendés lo suficiente para elegir mejor."
+    lossbox: ""
   },
   fit: {
     lbl: "Antes de seguir",
@@ -128,7 +128,7 @@ const siteTexts = {
       { num: "03", title: "Rendís más, sin destruirte", text: "Encontrás un modo de rendir que no te vacíe. Donde la exigencia es un motor, no un peso que cargás sin saber por qué." },
       { num: "04", title: "Te entendés de verdad", text: "Entendés tus patrones, tus motivaciones y tus límites. Y eso te da una base mucho más sólida para tomar decisiones y construir lo que querés." }
     ],
-    yque: "Porque el éxito no es tal, si no sos feliz con quien sos.",
+    yque: "El crecimiento real empieza cuando te entendés lo suficiente para elegir mejor.",
     online: [
         { title: "100% online", text: "Desde donde estés." },
         { title: "Confidencialidad", text: "Privacidad total. Tu espacio, tu momento." },
