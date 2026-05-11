@@ -42,7 +42,7 @@ const siteTexts = {
         text: "Construiste una carrera sólida. Pero hay áreas de tu vida y partes de vos mismo que quedaron en pausa sin que te dieras cuenta. Y eso, tarde o temprano, pide atención."
       }
     ],
-    bannerInf: "<strong>Buscar acompañamiento no es señal de que algo está mal. Es señal de que tomás en serio quién querés ser.</strong>",
+    bannerInf: "",
     tagsIntro: "Algunas de las cosas que trabajamos:",
     tags: [
       "Crisis laboral o vital",
