@@ -646,7 +646,7 @@
             font-size: clamp(14px, 1rem + 0.5vw, 16px);
             color: #8a8279;
             line-height: 1.8;
-            max-width: 600px;
+            max-width: 860px;
             margin-bottom: 3rem;
             font-weight: 300
         }
