@@ -1301,6 +1301,7 @@
             font-size: clamp(1.5rem, 2.5vw, 2rem);
             font-weight: 300;
             color: #f0ece4;
+            margin-top: 2rem;
             margin-bottom: 0.75rem;
             letter-spacing: -0.02em;
         }
