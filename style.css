@@ -1303,8 +1303,12 @@
             font-weight: 300;
             color: #f0ece4;
             margin-top: 2rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 2.5rem;
             letter-spacing: -0.02em;
+        }
+        .contact-title em {
+            color: #ffaf34;
+            font-style: normal;
         }
         .contact-quote {
             font-family: Georgia, serif;
