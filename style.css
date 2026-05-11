@@ -250,7 +250,7 @@
             color: #8a8279;
             line-height: 1.8;
             margin-bottom: 1.5rem;
-            max-width: 680px;
+            max-width: 860px;
             font-weight: 300
         }
 
@@ -398,7 +398,7 @@
             font-family: 'Inter Tight', sans-serif;
             font-size: clamp(15px, 1rem + 0.5vw, 17px);
             color: #e8e2d9;
-            margin-top: 2.5rem;
+            margin-top: 3rem;
             margin-bottom: 1.5rem;
             letter-spacing: 0.02em;
             font-weight: 500
@@ -408,7 +408,8 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 3rem
+            margin-bottom: 3rem;
+            justify-content: center;
         }
 
         .tag-pill {
