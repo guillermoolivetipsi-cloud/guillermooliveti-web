@@ -505,12 +505,6 @@
           document.getElementById('form-error').style.display = 'none';
           this.reset();
           btn.textContent = 'Enviado';
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'form_submit', {
-              'event_category': 'conversion',
-              'event_label': 'Formulario de contacto'
-            });
-          }
         } else {
           throw new Error('Error');
         }
@@ -714,43 +708,5 @@ document.addEventListener('click', function(e){
   </div>
 </div>
 
-<script>
-(function(){
-  /* COOKIES DESACTIVADAS TEMPORALMENTE */
-  loadAnalytics();
-  return;
-  var consent = localStorage.getItem('cookie_consent');
-  if(!consent){
-    document.getElementById('cookie-banner').style.display='flex';
-  } else if(consent === 'accepted'){
-    loadAnalytics();
-  }
-  document.getElementById('cookie-accept').addEventListener('click', function(){
-    localStorage.setItem('cookie_consent','accepted');
-    document.getElementById('cookie-banner').style.display='none';
-    loadAnalytics();
-  });
-  document.getElementById('cookie-reject').addEventListener('click', function(){
-    localStorage.setItem('cookie_consent','rejected');
-    document.getElementById('cookie-banner').style.display='none';
-  });
-  function loadAnalytics(){
-    if(window.gaLoaded) return;
-    window.gaLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HPS2H0E16F';
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', 'G-HPS2H0E16F', {
-      anonymize_ip: true,
-      cookie_flags: 'SameSite=None;Secure'
-    });
-  }
-})();
-</script>
 </body>
 </html>
