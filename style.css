@@ -1020,3 +1020,25 @@
       .contact-c { padding: 5rem 1.5rem; }
       .contact-c-form { padding: 2rem; }
     }
+
+    /* === MOBILE SMALL (iPhone) ========================== */
+    @media (max-width: 480px) {
+      .contact-c-form { padding: 1.5rem 1.2rem; }
+      .contact-c { padding: 3rem 1rem; }
+
+      /* intl-tel-input: dropdown ocupa ancho completo en mobile */
+      .iti--container {
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+      }
+      .iti__dropdown-content {
+        width: 100vw !important;
+        max-width: 100vw !important;
+      }
+      .phone-hint { font-size: 11px; }
+
+      /* Botón submit full width en mobile */
+      .form-below-c { flex-direction: column; align-items: flex-start; }
+      .btn-submit-c { width: 100%; justify-content: center; }
+    }
