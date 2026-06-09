@@ -503,11 +503,32 @@
         e.preventDefault();
         const phoneEl = document.getElementById('phone-number');
         const tel = document.getElementById('telefono');
-        if (phoneEl && phoneEl._iti && phoneEl.value.trim()) {
-          tel.value = phoneEl._iti.getNumber();
+        const phoneHint = document.querySelector('.phone-hint');
+
+        // Validar teléfono si tiene algo escrito
+        if (phoneEl && phoneEl.value.trim()) {
+          const iti = phoneEl._iti;
+          if (iti && !iti.isValidNumber()) {
+            phoneEl.classList.add('phone-error');
+            if (phoneHint) {
+              phoneHint.textContent = 'Número inválido. Revisá la cantidad de dígitos. Ej: 11 2345-6789';
+              phoneHint.classList.add('phone-hint-error');
+            }
+            phoneEl.focus();
+            return;
+          }
+          // Número válido — limpiar error y guardar
+          phoneEl.classList.remove('phone-error');
+          if (phoneHint) {
+            phoneHint.textContent = 'Sin el 0 ni el 15. Ej: 11 2345-6789';
+            phoneHint.classList.remove('phone-hint-error');
+          }
+          tel.value = iti ? iti.getNumber() : phoneEl.value.trim();
         } else {
-          tel.value = phoneEl ? phoneEl.value.trim() : '';
+          phoneEl && phoneEl.classList.remove('phone-error');
+          tel.value = '';
         }
+
         const btn = document.getElementById('submit-btn');
         btn.disabled = true; btn.textContent = 'Enviando...';
         try {
