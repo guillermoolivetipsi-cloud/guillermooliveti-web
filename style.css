@@ -807,6 +807,11 @@
     .phone-row .iti__flag-container { border-bottom: 1.5px solid var(--hairline-strong); }
     .phone-row .iti__selected-dial-code { font-family: 'Inter Tight'; font-size: 14px; color: var(--ink); }
     .phone-row .iti--separate-dial-code .iti__selected-flag { background: transparent; }
+    .phone-hint {
+      font-family: 'Inter Tight'; font-size: 12px;
+      color: var(--muted); margin-top: 6px;
+      font-style: italic;
+    }
     .form-below-c {
       display: flex; align-items: center; gap: 1.5rem; margin-top: 1rem;
       flex-wrap: wrap;
