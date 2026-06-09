@@ -599,21 +599,13 @@
         preferredCountries: ['ar', 'es', 'uy', 'cl', 'mx', 'co', 'pe'],
         utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/js/utils.js',
         separateDialCode: true,
-        autoPlaceholder: 'aggressive'
+        autoPlaceholder: 'off'
       });
       phoneInput._iti = iti;
 
       // Hint dinámico según país seleccionado
       const hint = document.querySelector('.phone-hint');
-      function updateHint() {
-        if (!hint) return;
-        const placeholder = phoneInput.getAttribute('placeholder');
-        hint.textContent = placeholder
-          ? 'Ej: ' + placeholder
-          : 'Ingresá tu número sin el código de país';
-      }
-      updateHint();
-      phoneInput.addEventListener('countrychange', updateHint);
+      if (hint) hint.textContent = 'Ingresá tu número sin el código de país ni el 0 inicial';
     }
   </script>
 
