@@ -792,7 +792,9 @@
       width: 100%;
       background: transparent; border: none !important;
       border-bottom: 1.5px solid var(--hairline-strong) !important;
-      padding: 12px 0 12px 0 !important;
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+      padding-right: 0 !important;
       font-family: 'Inter Tight'; font-size: 16px; font-weight: 400;
       color: var(--ink); outline: none;
       transition: border-color .3s;
