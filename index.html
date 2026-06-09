@@ -415,7 +415,7 @@
         <div class="form-group">
           <label for="phone-number">Teléfono <span class="optional">(opcional)</span></label>
           <div class="phone-row">
-            <input type="tel" id="phone-number" class="phone-number-input" placeholder="11 2345-6789" autocomplete="tel">
+            <input type="tel" id="phone-number" class="phone-number-input" autocomplete="tel">
           </div>
           <input type="hidden" name="telefono" id="telefono">
           <span class="phone-hint">Sin el 0 ni el 15. Ej: 11 2345-6789</span>
@@ -598,9 +598,22 @@
         initialCountry: 'ar',
         preferredCountries: ['ar', 'es', 'uy', 'cl', 'mx', 'co', 'pe'],
         utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/js/utils.js',
-        separateDialCode: true
+        separateDialCode: true,
+        autoPlaceholder: 'aggressive'
       });
       phoneInput._iti = iti;
+
+      // Hint dinámico según país seleccionado
+      const hint = document.querySelector('.phone-hint');
+      function updateHint() {
+        if (!hint) return;
+        const placeholder = phoneInput.getAttribute('placeholder');
+        hint.textContent = placeholder
+          ? 'Ej: ' + placeholder
+          : 'Ingresá tu número sin el código de país';
+      }
+      updateHint();
+      phoneInput.addEventListener('countrychange', updateHint);
     }
   </script>
 
