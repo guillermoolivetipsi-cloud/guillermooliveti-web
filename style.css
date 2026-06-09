@@ -786,25 +786,27 @@
     .contact-c-form input::placeholder,
     .contact-c-form textarea::placeholder { color: var(--muted-2); opacity: 0.55; font-weight: 400; }
     .contact-c-form textarea { min-height: 100px; line-height: 1.55; padding-top: 14px; }
-    .phone-row {
-      display: flex; align-items: flex-end; gap: 0;
-    }
-    .phone-code-select {
-      background: transparent; border: none;
-      border-bottom: 1.5px solid var(--hairline-strong);
-      padding: 12px 8px 12px 0;
-      font-family: 'Inter Tight'; font-size: 15px; font-weight: 400;
-      color: var(--ink); outline: none; cursor: pointer;
-      appearance: none; -webkit-appearance: none;
-      flex-shrink: 0; width: auto;
+    .phone-row { display: flex; }
+    .phone-row .iti { width: 100%; }
+    .phone-row .iti input {
+      width: 100%;
+      background: transparent; border: none !important;
+      border-bottom: 1.5px solid var(--hairline-strong) !important;
+      padding: 12px 0 12px 0 !important;
+      font-family: 'Inter Tight'; font-size: 16px; font-weight: 400;
+      color: var(--ink); outline: none;
       transition: border-color .3s;
+      border-radius: 0 !important;
+      box-shadow: none !important;
     }
-    .phone-code-select:focus { border-bottom-color: var(--terracotta); border-bottom-width: 1.5px; }
-    .phone-number-input {
-      flex: 1;
-      border-left: none !important;
-      padding-left: 12px !important;
+    .phone-row .iti input:focus {
+      border-bottom-color: var(--terracotta) !important;
+      border-bottom-width: 1.5px !important;
     }
+    .phone-row .iti input::placeholder { color: var(--muted-2); opacity: 0.55; font-weight: 400; }
+    .phone-row .iti__flag-container { border-bottom: 1.5px solid var(--hairline-strong); }
+    .phone-row .iti__selected-dial-code { font-family: 'Inter Tight'; font-size: 14px; color: var(--ink); }
+    .phone-row .iti--separate-dial-code .iti__selected-flag { background: transparent; }
     .form-below-c {
       display: flex; align-items: center; gap: 1.5rem; margin-top: 1rem;
       flex-wrap: wrap;

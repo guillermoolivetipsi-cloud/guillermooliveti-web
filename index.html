@@ -67,6 +67,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/css/intlTelInput.css">
     <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Mi Ri init Vi Gi Rr Wi Ji Bi capture calculateEventProperties tn register register_once register_for_session unregister unregister_for_session an getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync un identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty nn Xi createPersonProfile setInternalOrTestUser sn Hi cn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ki debug Lr rn getPageViewId captureTraceFeedback captureTraceMetric Di".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_mSbEUB7Bqy9QVXr9YCfZnPZcyXr7mwJLA6MxMUFz4iBY', {
@@ -413,23 +414,9 @@
           <input type="text" id="pais" name="pais" required placeholder="¿Desde dónde escribís?" autocomplete="country-name">
         </div>
         <div class="form-group">
-          <label>Teléfono <span class="optional">(opcional)</span></label>
+          <label for="phone-number">Teléfono <span class="optional">(opcional)</span></label>
           <div class="phone-row">
-            <select id="phone-code" class="phone-code-select" autocomplete="tel-country-code">
-              <option value="+54">🇦🇷 +54</option>
-              <option value="+34">🇪🇸 +34</option>
-              <option value="+598">🇺🇾 +598</option>
-              <option value="+56">🇨🇱 +56</option>
-              <option value="+52">🇲🇽 +52</option>
-              <option value="+57">🇨🇴 +57</option>
-              <option value="+51">🇵🇪 +51</option>
-              <option value="+58">🇻🇪 +58</option>
-              <option value="+591">🇧🇴 +591</option>
-              <option value="+595">🇵🇾 +595</option>
-              <option value="+1">🇺🇸/🇨🇦 +1</option>
-              <option value="+44">🇬🇧 +44</option>
-            </select>
-            <input type="tel" id="phone-number" class="phone-number-input" placeholder="11 2345-6789" autocomplete="tel-national">
+            <input type="tel" id="phone-number" class="phone-number-input" autocomplete="tel">
           </div>
           <input type="hidden" name="telefono" id="telefono">
         </div>
@@ -513,13 +500,12 @@
     if (form) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        const code = document.getElementById('phone-code');
-        const num  = document.getElementById('phone-number');
-        const tel  = document.getElementById('telefono');
-        if (num && num.value.trim()) {
-          tel.value = (code ? code.value : '') + ' ' + num.value.trim();
+        const phoneEl = document.getElementById('phone-number');
+        const tel = document.getElementById('telefono');
+        if (phoneEl && phoneEl._iti && phoneEl.value.trim()) {
+          tel.value = phoneEl._iti.getNumber();
         } else {
-          tel.value = '';
+          tel.value = phoneEl ? phoneEl.value.trim() : '';
         }
         const btn = document.getElementById('submit-btn');
         btn.disabled = true; btn.textContent = 'Enviando...';
@@ -582,6 +568,20 @@
       <button id="cookie-accept">Aceptar</button>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/js/intlTelInput.min.js"></script>
+  <script>
+    const phoneInput = document.getElementById('phone-number');
+    if (phoneInput) {
+      const iti = window.intlTelInput(phoneInput, {
+        initialCountry: 'ar',
+        preferredCountries: ['ar', 'es', 'uy', 'cl', 'mx', 'co', 'pe'],
+        utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/js/utils.js',
+        separateDialCode: true
+      });
+      phoneInput._iti = iti;
+    }
+  </script>
 
 </body>
 </html>
