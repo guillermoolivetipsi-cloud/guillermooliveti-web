@@ -1046,7 +1046,11 @@
       .hero-c-img { height: auto; aspect-ratio: 4/3; max-height: 400px; }
       .about-c-photo { display: none; }
       .section-c { padding: 3rem 1.5rem 4rem; }
-      .problems-c, .fit-c, .outcomes-c, .about-c-inner, .neopsy-c, .emigrado-c-cards, .online-c, .stats-c { grid-template-columns: 1fr; gap: 2rem; }
+      .problems-c, .fit-c, .outcomes-c, .about-c-inner, .neopsy-c, .emigrado-c-cards, .stats-c { grid-template-columns: 1fr; gap: 2rem; }
+      .online-c { grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 2rem; margin-top: 2.5rem; }
+      .online-c-item .icon-c { width: 36px; height: 36px; margin-bottom: 0.6rem; }
+      .online-c-item h4 { font-size: 0.9rem; }
+      .online-c-item p { font-size: 11px; }
       .test-c-grid { column-count: 1; }
       .about-c-photo { position: static; }
       .about-c { padding: 4rem 1.5rem; }
