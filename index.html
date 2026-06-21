@@ -691,14 +691,16 @@
       if (!cta || !hero || !contacto) return;
 
       function updateCta() {
-        if (window.innerWidth > 768) { cta.style.display = 'none'; return; }
+        if (window.innerWidth > 768) {
+          cta.style.display = 'none';
+          document.body.classList.remove('has-mobile-cta');
+          return;
+        }
         const heroBottom = hero.getBoundingClientRect().bottom;
         const formTop = contacto.getBoundingClientRect().top;
-        if (heroBottom < 0 && formTop > window.innerHeight) {
-          cta.style.display = 'flex';
-        } else {
-          cta.style.display = 'none';
-        }
+        const show = heroBottom < 0 && formTop > window.innerHeight * 0.5;
+        cta.style.display = show ? 'flex' : 'none';
+        document.body.classList.toggle('has-mobile-cta', show);
       }
       window.addEventListener('scroll', updateCta, { passive: true });
       window.addEventListener('resize', updateCta);

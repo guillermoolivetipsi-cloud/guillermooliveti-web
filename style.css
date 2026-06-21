@@ -1082,6 +1082,7 @@
       transition: background .2s;
     }
     .mobile-cta-btn:hover { background: var(--ink); }
+    body.has-mobile-cta .wa-fab { bottom: calc(70px + 1rem); }
 
     /* === CARDS "VER MÁS" MOBILE ========================= */
     .problems-ver-mas {
@@ -1128,5 +1129,6 @@
 
       /* Botón submit full width en mobile */
       .form-below-c { flex-direction: column; align-items: flex-start; }
-      .btn-submit-c { width: 100%; justify-content: center; }
+      .btn-submit-c { width: 100%; justify-content: center; padding: 13px 24px; font-size: 13px; gap: 10px; }
+      .btn-submit-c::after { font-size: 15px; }
     }
