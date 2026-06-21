@@ -626,11 +626,6 @@
     }
   </script>
 
-  <!-- CTA FLOTANTE MOBILE -->
-  <div id="mobile-cta" class="mobile-cta" style="display:none">
-    <a href="#contacto" class="mobile-cta-btn">Agendemos una conversación →</a>
-  </div>
-
   <!-- WHATSAPP FLOATING BUTTON -->
   <div id="wa-popup" class="wa-popup" style="display:none">
     <button class="wa-popup-close" onclick="toggleWaPopup()" aria-label="Cerrar">✕</button>
@@ -683,28 +678,6 @@
       if (btn) btn.style.display = 'none';
     }
 
-    // ── CTA flotante mobile: mostrar al pasar el hero, ocultar al llegar al form ──
-    (function() {
-      const cta = document.getElementById('mobile-cta');
-      const hero = document.querySelector('.hero-c');
-      const contacto = document.getElementById('contacto');
-      if (!cta || !hero || !contacto) return;
-
-      function updateCta() {
-        if (window.innerWidth > 768) {
-          cta.style.display = 'none';
-          document.body.classList.remove('has-mobile-cta');
-          return;
-        }
-        const heroBottom = hero.getBoundingClientRect().bottom;
-        const formTop = contacto.getBoundingClientRect().top;
-        const show = heroBottom < 0 && formTop > window.innerHeight * 0.5;
-        cta.style.display = show ? 'flex' : 'none';
-        document.body.classList.toggle('has-mobile-cta', show);
-      }
-      window.addEventListener('scroll', updateCta, { passive: true });
-      window.addEventListener('resize', updateCta);
-    })();
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/js/intlTelInput.min.js"></script>

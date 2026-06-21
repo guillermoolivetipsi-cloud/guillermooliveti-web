@@ -1064,25 +1064,6 @@
       .contact-c-form { padding: 2rem; }
     }
 
-    /* === CTA FLOTANTE MOBILE ============================= */
-    .mobile-cta {
-      display: none;
-      position: fixed; bottom: 0; left: 0; right: 0;
-      z-index: 999;
-      padding: 12px 16px 20px;
-      background: linear-gradient(to top, var(--paper) 70%, transparent);
-    }
-    .mobile-cta-btn {
-      display: block; width: 100%; text-align: center;
-      background: var(--terracotta); color: var(--paper);
-      padding: 14px 20px; border-radius: 999px;
-      font-family: 'Inter Tight'; font-size: 14px; font-weight: 600;
-      letter-spacing: 0.02em; text-decoration: none;
-      box-shadow: 0 4px 20px rgba(184,98,58,0.35);
-      transition: background .2s;
-    }
-    .mobile-cta-btn:hover { background: var(--ink); }
-    body.has-mobile-cta .wa-fab { bottom: calc(70px + 1rem); }
 
     /* === CARDS "VER MÁS" MOBILE ========================= */
     .problems-ver-mas {
