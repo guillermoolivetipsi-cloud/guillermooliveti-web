@@ -1107,6 +1107,10 @@
       .hero-c-img { aspect-ratio: 16/9; max-height: 260px; }
       .btn-c { padding: 13px 24px; font-size: 13px; gap: 10px; }
       .btn-c::after { font-size: 15px; }
+      .btn-c-light { padding: 13px 24px; font-size: 13px; gap: 10px; }
+      .btn-c-light::after { font-size: 15px; }
+      .btn-c-outline { padding: 12px 22px; font-size: 13px; gap: 10px; }
+      .btn-c-outline::after { font-size: 15px; }
       .contact-c-form { padding: 1.5rem 1.2rem; }
       .contact-c { padding: 3rem 1rem; }
 
