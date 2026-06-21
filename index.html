@@ -121,11 +121,12 @@
     <div class="problems-c fade-in">
       <div class="problem-c"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><h3>Algo no encaja.</h3><p>Tenés claridad profesional, metas, dirección. Pero hay algo interno que no acompaña y eso frena más que cualquier obstáculo externo.</p></div>
       <div class="problem-c"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Te cuesta elegir lo que querés.</h3><p>Tomás decisiones todo el día para tu equipo, tu negocio, tus clientes. Pero cuando se trata de vos, la claridad desaparece.</p></div>
-      <div class="problem-c"><span class="icon-c"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><h3>Repetís dinámicas que te hacen mal.</h3><p>En los vínculos, en el trabajo, con vos mismo. El mapa que usás tiene puntos ciegos que no ves solo.</p></div>
-      <div class="problem-c"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/></svg></span><h3>Cuanto más alto llegás, más solo se siente.</h3><p>Cada vez menos personas entienden lo que implica estar donde estás. No encontrás quien hable tu idioma.</p></div>
       <div class="problem-c"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span><h3>Sostenés mucho. ¿Quién te sostiene a vos?</h3><p>Hay un agotamiento que no se ve desde afuera y no se resuelve con un descanso.</p></div>
-      <div class="problem-c"><span class="icon-c"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><h3>Lo profesional lo ocupó todo.</h3><p>Hay áreas de tu vida y partes de vos que quedaron en pausa sin que te dieras cuenta. Tarde o temprano, piden atención.</p></div>
+      <div class="problem-c problem-c--extra"><span class="icon-c"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><h3>Repetís dinámicas que te hacen mal.</h3><p>En los vínculos, en el trabajo, con vos mismo. El mapa que usás tiene puntos ciegos que no ves solo.</p></div>
+      <div class="problem-c problem-c--extra"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/></svg></span><h3>Cuanto más alto llegás, más solo se siente.</h3><p>Cada vez menos personas entienden lo que implica estar donde estás. No encontrás quien hable tu idioma.</p></div>
+      <div class="problem-c problem-c--extra"><span class="icon-c"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><h3>Lo profesional lo ocupó todo.</h3><p>Hay áreas de tu vida y partes de vos que quedaron en pausa sin que te dieras cuenta. Tarde o temprano, piden atención.</p></div>
     </div>
+    <button class="problems-ver-mas" id="problems-ver-mas" onclick="verMasProblemas()">Ver más ↓</button>
 
     <div class="tags-c fade-in">
       <p class="tags-c-title">Algunas de las cosas que trabajamos</p>
@@ -625,6 +626,11 @@
     }
   </script>
 
+  <!-- CTA FLOTANTE MOBILE -->
+  <div id="mobile-cta" class="mobile-cta" style="display:none">
+    <a href="#contacto" class="mobile-cta-btn">Agendemos una conversación →</a>
+  </div>
+
   <!-- WHATSAPP FLOATING BUTTON -->
   <div id="wa-popup" class="wa-popup" style="display:none">
     <button class="wa-popup-close" onclick="toggleWaPopup()" aria-label="Cerrar">✕</button>
@@ -667,6 +673,37 @@
       <button id="cookie-accept">Aceptar</button>
     </div>
   </div>
+
+  <script>
+    // ── Ver más cards en mobile ──
+    function verMasProblemas() {
+      const extras = document.querySelectorAll('.problem-c--extra');
+      const btn = document.getElementById('problems-ver-mas');
+      extras.forEach(el => el.classList.add('problem-c--visible'));
+      if (btn) btn.style.display = 'none';
+    }
+
+    // ── CTA flotante mobile: mostrar al pasar el hero, ocultar al llegar al form ──
+    (function() {
+      const cta = document.getElementById('mobile-cta');
+      const hero = document.querySelector('.hero-c');
+      const contacto = document.getElementById('contacto');
+      if (!cta || !hero || !contacto) return;
+
+      function updateCta() {
+        if (window.innerWidth > 768) { cta.style.display = 'none'; return; }
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        const formTop = contacto.getBoundingClientRect().top;
+        if (heroBottom < 0 && formTop > window.innerHeight) {
+          cta.style.display = 'flex';
+        } else {
+          cta.style.display = 'none';
+        }
+      }
+      window.addEventListener('scroll', updateCta, { passive: true });
+      window.addEventListener('resize', updateCta);
+    })();
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/js/intlTelInput.min.js"></script>
   <script>
