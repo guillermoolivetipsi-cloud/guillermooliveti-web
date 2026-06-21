@@ -839,14 +839,52 @@
       padding: 1rem 1.2rem; border-radius: 4px;
       font-family: 'Inter Tight'; font-size: 14px; margin-top: 0.5rem;
     }
-    .form-status-c.ok {
-      background: rgba(184,98,58,0.08); color: var(--terracotta);
-      border: 1px solid rgba(184,98,58,0.3);
-    }
     .form-status-c.err {
       background: rgba(184,98,58,0.05); color: #c1392c;
       border: 1px solid rgba(193,57,44,0.3);
     }
+
+    /* Estado de éxito post-envío */
+    .form-success-state {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center;
+      padding: 3rem 2rem; gap: 1rem;
+    }
+    .form-success-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #e8f5ee; color: #2e7d51;
+      font-size: 24px; display: flex; align-items: center; justify-content: center;
+    }
+    .form-success-title {
+      font-family: 'Newsreader', serif; font-size: 1.4rem;
+      font-weight: 400; color: var(--ink);
+    }
+    .form-success-msg {
+      font-family: 'Inter Tight'; font-size: 14px;
+      color: var(--muted); line-height: 1.6; max-width: 300px;
+    }
+
+    /* Alternativa WhatsApp bajo el form */
+    .form-wa-alt {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      margin-top: 1.2rem; padding-top: 1.2rem;
+      border-top: 1px solid var(--hairline);
+      font-family: 'Inter Tight'; font-size: 13px; color: var(--muted);
+    }
+    .form-wa-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: #25D366; font-weight: 600; text-decoration: none;
+      transition: opacity .2s;
+    }
+    .form-wa-link:hover { opacity: 0.8; }
+
+    /* Validación inline */
+    .field-error { border-bottom-color: #c0392b !important; }
+    .field-hint {
+      font-family: 'Inter Tight'; font-size: 12px;
+      margin-top: 5px; display: block;
+    }
+    .field-hint-error { color: #c0392b; }
 
     /* === NEWSLETTER ====================================== */
     .neopsy-c {
