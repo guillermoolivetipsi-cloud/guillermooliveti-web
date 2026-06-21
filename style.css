@@ -1044,6 +1044,7 @@
       .nav-c-cta { font-size: 11px; padding: 8px 14px; letter-spacing: 0.01em; }
       .hero-c { grid-template-columns: 1fr; gap: 2rem; height: auto; min-height: auto; overflow: visible; padding-top: 7rem; padding-left: 1.5rem; padding-right: 1.5rem; }
       .hero-c-img { height: auto; aspect-ratio: 4/3; max-height: 400px; }
+      .about-c-photo { display: none; }
       .section-c { padding: 3rem 1.5rem 4rem; }
       .problems-c, .fit-c, .outcomes-c, .about-c-inner, .neopsy-c, .emigrado-c-cards, .online-c, .stats-c { grid-template-columns: 1fr; gap: 2rem; }
       .test-c-grid { column-count: 1; }
@@ -1061,6 +1062,7 @@
 
     /* === MOBILE SMALL (iPhone) ========================== */
     @media (max-width: 480px) {
+      .hero-c-img { aspect-ratio: 16/9; max-height: 260px; }
       .contact-c-form { padding: 1.5rem 1.2rem; }
       .contact-c { padding: 3rem 1rem; }
 
