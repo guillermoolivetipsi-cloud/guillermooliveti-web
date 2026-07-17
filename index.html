@@ -63,7 +63,7 @@
     }
     </script>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link rel="preload" as="image" href="images/foto_guille.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="images/foto_guille.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Inter+Tight:wght@300;400;500&display=swap">
@@ -104,7 +104,10 @@
       <a class="btn-c" href="#contacto">Agendemos una conversación</a>
     </div>
     <div class="hero-c-img fade-in">
-      <img src="images/foto_guille.jpeg" alt="Guillermo Oliveti" fetchpriority="high" loading="eager" width="800" height="1000">
+      <picture>
+        <source srcset="images/foto_guille.webp" type="image/webp">
+        <img src="images/foto_guille.jpg" alt="Guillermo Oliveti" fetchpriority="high" loading="eager" width="800" height="1000">
+      </picture>
       <div class="hero-c-img-cap">
         <span class="name">Guillermo Oliveti</span>
       </div>
@@ -193,7 +196,10 @@
   <section class="about-c" id="sobre">
     <div class="about-c-inner fade-in">
       <div class="about-c-photo">
-        <img src="images/foto_guille.jpeg" alt="Guillermo Oliveti" loading="lazy" width="600" height="750">
+        <picture>
+          <source srcset="images/foto_guille.webp" type="image/webp">
+          <img src="images/foto_guille.jpg" alt="Guillermo Oliveti" loading="lazy" width="600" height="750">
+        </picture>
         <p class="cap">Psicólogo Clínico, ex-director operativo.</p>
         <a class="linkedin" href="https://www.linkedin.com/in/guillermo-oliveti-02299722/?locale=en" target="_blank">
           <svg width="14" height="14" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -461,7 +467,10 @@
     <div>
       <div class="neo-c-eyebrow">El universo detrás</div>
       <div class="neo-c-lockup">
-        <span class="neo-c-mark-wrap"><img class="neo-c-mark" src="images/neopsy-logo.png" alt="NeoPsy" loading="lazy" width="120" height="40"></span>
+        <span class="neo-c-mark-wrap"><picture>
+          <source srcset="images/neopsy-logo.webp" type="image/webp">
+          <img class="neo-c-mark" src="images/neopsy-logo.png" alt="NeoPsy" loading="lazy" width="120" height="40">
+        </picture></span>
         <div class="neo-c-logo">Neo<em>Psy</em></div>
       </div>
       <div class="neo-c-tag">Un ritual quincenal para pensar mejor.</div>
@@ -482,7 +491,10 @@
       <a href="aviso-legal.html">Aviso legal</a>
       <a href="https://www.linkedin.com/in/guillermo-oliveti-02299722/" target="_blank">LinkedIn</a>
     </div>
-    <div><span class="footer-mark-wrap"><img class="footer-mark" src="images/neopsy-logo.png" alt="" loading="lazy" width="80" height="26"></span>Hecho desde NeoPsy</div>
+    <div><span class="footer-mark-wrap"><picture>
+        <source srcset="images/neopsy-logo.webp" type="image/webp">
+        <img class="footer-mark" src="images/neopsy-logo.png" alt="" loading="lazy" width="80" height="26">
+      </picture></span>Hecho desde NeoPsy</div>
   </footer>
 
   <script>
@@ -638,7 +650,10 @@
   <div id="wa-popup" class="wa-popup" style="display:none">
     <button class="wa-popup-close" onclick="toggleWaPopup()" aria-label="Cerrar">✕</button>
     <div class="wa-popup-photo">
-      <img src="images/Psicologo2.jpg" alt="Guillermo Oliveti" loading="lazy" width="60" height="60">
+      <picture>
+        <source srcset="images/Psicologo2.webp" type="image/webp">
+        <img src="images/Psicologo2.jpg" alt="Guillermo Oliveti" loading="lazy" width="60" height="60">
+      </picture>
     </div>
     <div class="wa-popup-body">
       <p class="wa-popup-name">Guillermo Oliveti</p>
