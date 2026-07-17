@@ -63,11 +63,16 @@
     }
     </script>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="image" href="images/foto_guille.jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Inter+Tight:wght@300;400;500&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/css/intlTelInput.css">
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/css/intlTelInput.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23/build/css/intlTelInput.css"></noscript>
     <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Mi Ri init Vi Gi Rr Wi Ji Bi capture calculateEventProperties tn register register_once register_for_session unregister unregister_for_session an getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync un identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty nn Xi createPersonProfile setInternalOrTestUser sn Hi cn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ki debug Lr rn getPageViewId captureTraceFeedback captureTraceMetric Di".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_mSbEUB7Bqy9QVXr9YCfZnPZcyXr7mwJLA6MxMUFz4iBY', {
@@ -89,6 +94,7 @@
     <a class="nav-c-cta" href="#contacto">Agendemos una conversación</a>
   </nav>
 
+  <main>
   <!-- HERO -->
   <section class="hero-c">
     <div class="fade-in">
@@ -98,7 +104,7 @@
       <a class="btn-c" href="#contacto">Agendemos una conversación</a>
     </div>
     <div class="hero-c-img fade-in">
-      <img src="images/foto_guille.jpeg" alt="Guillermo Oliveti">
+      <img src="images/foto_guille.jpeg" alt="Guillermo Oliveti" fetchpriority="high" loading="eager" width="800" height="1000">
       <div class="hero-c-img-cap">
         <span class="name">Guillermo Oliveti</span>
       </div>
@@ -187,7 +193,7 @@
   <section class="about-c" id="sobre">
     <div class="about-c-inner fade-in">
       <div class="about-c-photo">
-        <img src="images/foto_guille.jpeg" alt="Guillermo Oliveti">
+        <img src="images/foto_guille.jpeg" alt="Guillermo Oliveti" loading="lazy" width="600" height="750">
         <p class="cap">Psicólogo Clínico, ex-director operativo.</p>
         <a class="linkedin" href="https://www.linkedin.com/in/guillermo-oliveti-02299722/?locale=en" target="_blank">
           <svg width="14" height="14" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -235,10 +241,10 @@
       </div>
 
       <div class="emigrado-c-cards">
-        <div class="emigrado-c-card"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><h4>El duelo que no tiene nombre.</h4><p>Dejaste personas, lugares, una identidad construida. Ese duelo existe aunque hayas elegido irte.</p></div>
-        <div class="emigrado-c-card"><span class="icon-c"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><line x1="12" y1="13" x2="12" y2="17" stroke-dasharray="2 2"/></svg></span><h4>Identidad en suspenso.</h4><p>¿Sos el que eras allá o ya sos otro? El nuevo contexto te obliga a reconstruirte y no sabés cómo empezar.</p></div>
-        <div class="emigrado-c-card"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h4>No hay espacio para dudar.</h4><p>Cuestionar si fue la decisión correcta se siente como una traición a todo lo que dejaste atrás.</p></div>
-        <div class="emigrado-c-card"><span class="icon-c"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8" stroke-dasharray="2 2"/></svg></span><h4>Te integraste. Pero algo falta.</h4><p>Aprendiste a moverte, tenés tu círculo. Y aun así, hay una soledad que no desaparece.</p></div>
+        <div class="emigrado-c-card"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><h3>El duelo que no tiene nombre.</h3><p>Dejaste personas, lugares, una identidad construida. Ese duelo existe aunque hayas elegido irte.</p></div>
+        <div class="emigrado-c-card"><span class="icon-c"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><line x1="12" y1="13" x2="12" y2="17" stroke-dasharray="2 2"/></svg></span><h3>Identidad en suspenso.</h3><p>¿Sos el que eras allá o ya sos otro? El nuevo contexto te obliga a reconstruirte y no sabés cómo empezar.</p></div>
+        <div class="emigrado-c-card"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>No hay espacio para dudar.</h3><p>Cuestionar si fue la decisión correcta se siente como una traición a todo lo que dejaste atrás.</p></div>
+        <div class="emigrado-c-card"><span class="icon-c"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8" stroke-dasharray="2 2"/></svg></span><h3>Te integraste. Pero algo falta.</h3><p>Aprendiste a moverte, tenés tu círculo. Y aun así, hay una soledad que no desaparece.</p></div>
       </div>
 
       <div class="emigrado-c-quote">
@@ -455,7 +461,7 @@
     <div>
       <div class="neo-c-eyebrow">El universo detrás</div>
       <div class="neo-c-lockup">
-        <span class="neo-c-mark-wrap"><img class="neo-c-mark" src="images/neopsy-logo.png" alt="NeoPsy"></span>
+        <span class="neo-c-mark-wrap"><img class="neo-c-mark" src="images/neopsy-logo.png" alt="NeoPsy" loading="lazy" width="120" height="40"></span>
         <div class="neo-c-logo">Neo<em>Psy</em></div>
       </div>
       <div class="neo-c-tag">Un ritual quincenal para pensar mejor.</div>
@@ -466,6 +472,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer>
     <div>© 2026 Guillermo Oliveti · Psicología Clínica</div>
     <div class="links">
@@ -474,7 +482,7 @@
       <a href="aviso-legal.html">Aviso legal</a>
       <a href="https://www.linkedin.com/in/guillermo-oliveti-02299722/" target="_blank">LinkedIn</a>
     </div>
-    <div><span class="footer-mark-wrap"><img class="footer-mark" src="images/neopsy-logo.png" alt=""></span>Hecho desde NeoPsy</div>
+    <div><span class="footer-mark-wrap"><img class="footer-mark" src="images/neopsy-logo.png" alt="" loading="lazy" width="80" height="26"></span>Hecho desde NeoPsy</div>
   </footer>
 
   <script>
@@ -630,7 +638,7 @@
   <div id="wa-popup" class="wa-popup" style="display:none">
     <button class="wa-popup-close" onclick="toggleWaPopup()" aria-label="Cerrar">✕</button>
     <div class="wa-popup-photo">
-      <img src="images/Psicologo2.jpg" alt="Guillermo Oliveti">
+      <img src="images/Psicologo2.jpg" alt="Guillermo Oliveti" loading="lazy" width="60" height="60">
     </div>
     <div class="wa-popup-body">
       <p class="wa-popup-name">Guillermo Oliveti</p>
