@@ -24,7 +24,7 @@
       -webkit-font-smoothing: antialiased;
       font-feature-settings: "kern", "liga";
     }
-    .sans { font-family: 'Inter Tight', sans-serif; }
+
 
     /* === NAV ============================================ */
     nav.top {
@@ -109,11 +109,6 @@
       content: "→"; font-size: 18px; transition: transform .3s;
     }
     .btn-c:hover::after { transform: translateX(4px); }
-    .hero-c-micro {
-      margin-top: 1.5rem; font-family: 'Inter Tight';
-      font-size: 12px; color: var(--muted-2); letter-spacing: 0.05em;
-    }
-
     .hero-c-img {
       position: relative;
       height: calc(100vh - 10rem);
@@ -259,8 +254,6 @@
       text-align: center;
       position: relative;
     }
-    .quote-c.olive { background: var(--olive); color: var(--paper); }
-    .quote-c.ink { background: var(--ink); color: var(--paper); }
     .quote-c p {
       font-family: 'Newsreader', serif; font-style: italic; font-weight: 300;
       font-size: clamp(1.8rem, 3.6vw, 3.2rem);
@@ -268,22 +261,17 @@
       max-width: 900px; margin: 0 auto;
       color: var(--ink);
     }
-    .quote-c.olive p, .quote-c.ink p { color: var(--paper); }
     .quote-c p em { font-style: italic; color: var(--terracotta); }
-    .quote-c.olive p em { color: #ffd9a8; }
     .quote-c .mark {
       font-family: 'Newsreader', serif; font-style: italic;
       font-size: 6rem; line-height: 0.6;
       color: var(--terracotta); margin-bottom: 2rem; display: block;
     }
-    .quote-c.olive .mark, .quote-c.ink .mark { color: var(--terracotta-soft); }
     .quote-c .attribution {
       margin-top: 3rem; font-family: 'Inter Tight';
       font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
       opacity: 0.7;
     }
-    .quote-c.olive .attribution, .quote-c.ink .attribution { opacity: 0.8; }
-
     /* === FIT ============================================= */
     .fit-c {
       display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
@@ -640,19 +628,6 @@
       font-family: 'Inter Tight'; font-size: 13px; color: var(--ink-soft);
       font-weight: 500; margin-top: 2px;
     }
-    .test-c .feat {
-      column-span: all; padding: 2rem 0; margin-bottom: 3rem;
-    }
-    .test-c-feat {
-      column-span: all; text-align: center;
-      max-width: 720px; margin: 0 auto 4rem;
-      padding-bottom: 4rem;
-      border-bottom: 1px solid var(--hairline-strong);
-    }
-    .test-c-feat .mark { font-size: 5rem; }
-    .test-c-feat blockquote { font-size: 1.5rem; line-height: 1.4; }
-    .test-c-feat .meta { justify-content: center; }
-
     /* === FAQ ============================================= */
     .faq-c { max-width: 800px; margin: 0 auto; }
     .faq-c-item {
