@@ -63,7 +63,7 @@
     }
     </script>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link rel="preload" as="image" href="images/foto_guille.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/foto_guille.webp" imagesrcset="images/foto_guille-mobile.webp 800w, images/foto_guille.webp 1536w" imagesizes="(max-width: 980px) 100vw, 50vw" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Inter+Tight:wght@300;400;500&display=swap">
@@ -105,7 +105,8 @@
     </div>
     <div class="hero-c-img fade-in">
       <picture>
-        <source srcset="images/foto_guille.webp" type="image/webp">
+        <source type="image/webp" srcset="images/foto_guille-mobile.webp 800w, images/foto_guille.webp 1536w" sizes="(max-width: 980px) 100vw, 50vw">
+        <source srcset="images/foto_guille-mobile.jpg 800w, images/foto_guille.jpg 1536w" sizes="(max-width: 980px) 100vw, 50vw">
         <img src="images/foto_guille.jpg" alt="Guillermo Oliveti" fetchpriority="high" loading="eager" width="800" height="1000">
       </picture>
       <div class="hero-c-img-cap">
@@ -197,7 +198,8 @@
     <div class="about-c-inner fade-in">
       <div class="about-c-photo">
         <picture>
-          <source srcset="images/foto_guille.webp" type="image/webp">
+          <source type="image/webp" srcset="images/foto_guille-mobile.webp 800w, images/foto_guille.webp 1536w" sizes="(max-width: 980px) 100vw, 50vw">
+          <source srcset="images/foto_guille-mobile.jpg 800w, images/foto_guille.jpg 1536w" sizes="(max-width: 980px) 100vw, 50vw">
           <img src="images/foto_guille.jpg" alt="Guillermo Oliveti" loading="lazy" width="600" height="750">
         </picture>
         <p class="cap">Psicólogo Clínico, ex-director operativo.</p>
