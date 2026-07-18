@@ -266,9 +266,16 @@
     .online-c-item p { font-family: 'Inter Tight'; font-size: 13px; color: var(--muted); }
     .testimonials-c { background: var(--paper-2); padding: 8rem 3rem; }
     .testimonials-c-inner { max-width: 1180px; margin: 0 auto; }
-    .test-c-grid { max-width: 780px; margin: 4rem auto 0; display: flex; flex-direction: column; }
+    .test-c-wrap { max-width: 780px; margin: 4rem auto 0; position: relative; }
+    .test-c-grid { display: flex; flex-direction: column; }
+    .test-c-grid.collapsed .test-c:nth-child(n+4) { display: none; }
     .test-c { display: flex; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid var(--hairline-strong); }
     .test-c:last-child { border-bottom: none; }
+    .test-c-fade { position: absolute; bottom: 52px; left: 0; right: 0; height: 120px; background: linear-gradient(transparent, var(--paper-2)); pointer-events: none; }
+    .test-c-fade.hidden { display: none; }
+    .test-expand-btn { display: block; width: 100%; margin-top: 1.5rem; padding: 0.9rem 1.5rem; font-family: 'Inter Tight'; font-size: 15px; font-weight: 500; color: var(--terracotta); background: transparent; border: 1px solid var(--terracotta); border-radius: 8px; cursor: pointer; text-align: center; transition: background 0.2s; }
+    .test-expand-btn:hover { background: rgba(184,98,58,0.06); }
+    .test-expand-btn.hidden { display: none; }
     .test-c-bar { width: 2px; background: var(--terracotta); border-radius: 2px; flex-shrink: 0; min-height: 100%; }
     .test-c-body { flex: 1; }
     .test-c blockquote { font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; font-size: 1.15rem; line-height: 1.6; color: var(--ink); margin-bottom: 1.25rem; }
@@ -659,7 +666,8 @@
         <h2>Personas que ya <em>dieron el paso.</em></h2>
       </div>
 
-      <div class="test-c-grid fade-in">
+      <div class="test-c-wrap fade-in">
+      <div class="test-c-grid collapsed">
         <div class="test-c">
           <div class="test-c-bar"></div>
           <div class="test-c-body">
@@ -730,6 +738,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="test-c-fade" id="test-fade"></div>
+      <button class="test-expand-btn" id="test-expand-btn">Leer todos los testimonios ↓</button>
       </div>
     </div>
   </section>
@@ -1121,6 +1132,13 @@
     } else {
       window.addEventListener('load', function() { setTimeout(loadGTM, 2000); });
     }
+  </script>
+  <script>
+    document.getElementById('test-expand-btn').addEventListener('click', function() {
+      document.querySelector('.test-c-grid').classList.remove('collapsed');
+      document.getElementById('test-fade').classList.add('hidden');
+      this.classList.add('hidden');
+    });
   </script>
 
 </body>
