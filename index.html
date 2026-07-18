@@ -253,11 +253,11 @@
     .btn-c-light:hover { background: var(--paper); color: var(--olive); transform: translateY(-2px); }
     .btn-c-light::after { content: "→"; font-size: 18px; }
     .emigrado-c-cta { text-align: center; }
-    .outcomes-c { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 980px; margin: 4rem auto 0; }
-    .outcome-c { padding: 2.5rem; border: 1px solid var(--hairline); border-radius: 14px; background: var(--paper-2); }
-    .outcome-c .icon-c { width: 44px; height: 44px; border-radius: 50%; background: rgba(184, 98, 58, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
-    .outcome-c .num { font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: 1.4rem; color: var(--terracotta); margin-bottom: 0.5rem; line-height: 1; }
-    .outcome-c h3 { font-family: 'Newsreader', serif; font-weight: 400; font-size: 1.5rem; line-height: 1.25; color: var(--ink); margin-bottom: 0.8rem; }
+    .outcomes-c { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 980px; margin: 4rem auto 0; border-top: 1px solid var(--hairline-strong); }
+    .outcome-c { padding: 2.5rem 2rem 2.5rem 0; border-bottom: 1px solid var(--hairline-strong); }
+    .outcome-c:nth-child(even) { padding-left: 2.5rem; padding-right: 0; border-left: 1px solid var(--hairline-strong); }
+    .outcome-c .num { font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: 1.2rem; color: var(--terracotta); margin-bottom: 0.75rem; line-height: 1; }
+    .outcome-c h3 { font-family: 'Newsreader', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.25; color: var(--ink); margin-bottom: 0.75rem; }
     .outcome-c p { font-family: 'Inter Tight'; font-size: 15px; line-height: 1.7; color: var(--ink-soft); }
     .online-c { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; max-width: 900px; margin: 5rem auto 0; padding-top: 4rem; border-top: 1px solid var(--hairline-strong); text-align: center; }
     .online-c-item .icon-c { width: 44px; height: 44px; border-radius: 50%; background: rgba(184, 98, 58, 0.1); display: inline-flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
@@ -383,7 +383,9 @@
       .hero-c-img { height: auto; aspect-ratio: 4/3; max-height: 400px; }
       .about-c-photo { display: none; }
       .section-c { padding: 3rem 1.5rem 4rem; }
-      .problems-c, .fit-c, .outcomes-c, .about-c-inner, .neopsy-c, .emigrado-c-cards { grid-template-columns: 1fr; gap: 2rem; }
+      .problems-c, .fit-c, .about-c-inner, .neopsy-c, .emigrado-c-cards { grid-template-columns: 1fr; gap: 2rem; }
+      .outcomes-c { grid-template-columns: 1fr; }
+      .outcome-c:nth-child(even) { padding-left: 0; border-left: none; }
       .stats-c { gap: 1.5rem 2rem; margin: 2rem 0 3rem; padding: 2rem 0; }
       .hero-c-img-cap .name { font-size: 1rem; }
       .online-c { grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 2rem; margin-top: 2.5rem; }
@@ -630,10 +632,10 @@
     </div>
 
     <div class="outcomes-c fade-in">
-      <div class="outcome-c"><span class="icon-c"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div class="num">01.</div><h3>Decisiones más claras</h3><p>Entendés qué te pasa por dentro cuando tenés que elegir y eso cambia la calidad de tus decisiones.</p></div>
-      <div class="outcome-c"><span class="icon-c"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><div class="num">02.</div><h3>Del insight al cambio real</h3><p>Lo que entendés empieza a traducirse en cómo reaccionás, cómo decidís, cómo te vinculás.</p></div>
-      <div class="outcome-c"><span class="icon-c"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><div class="num">03.</div><h3>Rendís más, sin destruirte</h3><p>Encontrás un modo de rendir que no te vacíe. Donde la exigencia es motor, no peso.</p></div>
-      <div class="outcome-c"><span class="icon-c"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span><div class="num">04.</div><h3>Te entendés de verdad</h3><p>Entendés tus patrones, motivaciones y límites. Una base más sólida para construir.</p></div>
+      <div class="outcome-c"><div class="num">01.</div><h3>Decisiones más claras</h3><p>Entendés qué te pasa por dentro cuando tenés que elegir y eso cambia la calidad de tus decisiones.</p></div>
+      <div class="outcome-c"><div class="num">02.</div><h3>Del insight al cambio real</h3><p>Lo que entendés empieza a traducirse en cómo reaccionás, cómo decidís, cómo te vinculás.</p></div>
+      <div class="outcome-c"><div class="num">03.</div><h3>Rendís más, sin destruirte</h3><p>Encontrás un modo de rendir que no te vacíe. Donde la exigencia es motor, no peso.</p></div>
+      <div class="outcome-c"><div class="num">04.</div><h3>Te entendés de verdad</h3><p>Entendés tus patrones, motivaciones y límites. Una base más sólida para construir.</p></div>
     </div>
 
     <div class="online-c fade-in">
