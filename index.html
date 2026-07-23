@@ -799,6 +799,7 @@
       <form class="contact-c-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="6f19ae7f-4534-4355-9f3e-f03092177150">
         <input type="hidden" name="subject" value="Nuevo contacto — guillermooliveti.com">
+        <input type="hidden" name="Origen" id="lead-origen" value="web">
         <input type="checkbox" id="botcheck" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-group">
           <label for="nombre">Nombre</label>
@@ -1028,6 +1029,10 @@
             document.getElementById('form-success').style.display = 'flex';
             document.getElementById('form-error').style.display = 'none';
             try { localStorage.removeItem(LS_KEY); } catch(e) {}
+            try {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({ event: 'form_submit', lead_origen: window.__leadOrigen || 'web' });
+            } catch(e) {}
           } else throw new Error();
         } catch(err) {
           document.getElementById('form-error').style.display = 'block';
@@ -1072,6 +1077,27 @@
       popup.style.display = 'none';
     }
   });
+  </script>
+  <script>
+  (function() {
+    var origen = 'web';
+    try {
+      var utm = new URLSearchParams(window.location.search).get('utm_content');
+      if (utm) sessionStorage.setItem('lead_origen', utm);
+      origen = sessionStorage.getItem('lead_origen') || 'web';
+    } catch(e) {}
+    window.__leadOrigen = origen;
+
+    var origenInput = document.getElementById('lead-origen');
+    if (origenInput) origenInput.value = origen;
+
+    if (origen === 'directivos') {
+      var waText = encodeURIComponent('Hola Guillermo, vi tu anuncio para directivos y me gustaría coordinar la consulta inicial.');
+      document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a) {
+        a.href = 'https://wa.me/541150478457?text=' + waText;
+      });
+    }
+  })();
   </script>
 
   <!-- COOKIE BANNER -->
