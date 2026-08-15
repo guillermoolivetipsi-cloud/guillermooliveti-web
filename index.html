@@ -816,6 +816,8 @@
         <input type="hidden" name="access_key" value="6f19ae7f-4534-4355-9f3e-f03092177150">
         <input type="hidden" name="subject" value="Nuevo contacto — guillermooliveti.com">
         <input type="hidden" name="Origen" id="lead-origen" value="web">
+        <input type="hidden" name="gclid" id="track-gclid" value="">
+        <input type="hidden" name="seg" id="track-seg" value="">
         <input type="checkbox" id="botcheck" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-group">
           <label for="nombre">Nombre</label>
@@ -1048,6 +1050,7 @@
 
         const btn = document.getElementById('submit-btn');
         btn.disabled = true; btn.textContent = 'Enviando...';
+        try { if (window.__registrarEventoLead) window.__registrarEventoLead('form'); } catch(e) {}
         try {
           const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(this) });
           const data = await r.json();
@@ -1125,6 +1128,94 @@
         a.href = 'https://wa.me/541150478457?text=' + waText;
       });
     }
+  })();
+  </script>
+  <script>
+  (function() {
+    var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwzrPPT3E4kAEQZWMeXh3BKFJG1su7oTfDuJaTCDnCewV1xkVS9j8nTFQIs1D1QK5YYBA/exec';
+    var MAX_AGE = 90 * 24 * 60 * 60 * 1000; // 90 días
+
+    function leer(clave) {
+      try {
+        var raw = localStorage.getItem(clave);
+        if (!raw) return null;
+        var obj = JSON.parse(raw);
+        if (!obj || !obj.fecha || (Date.now() - obj.fecha) > MAX_AGE) {
+          localStorage.removeItem(clave);
+          return null;
+        }
+        return obj;
+      } catch(e) { return null; }
+    }
+    function guardar(clave, obj) {
+      try { obj.fecha = Date.now(); localStorage.setItem(clave, JSON.stringify(obj)); } catch(e) {}
+    }
+
+    var gclid = '', seg = '', utms = {};
+    try {
+      var params = new URLSearchParams(window.location.search);
+
+      // gclid: URL pisa lo guardado
+      var g = params.get('gclid');
+      if (g) { gclid = g; guardar('neopsy_gclid', { gclid: g }); }
+      else { var gs = leer('neopsy_gclid'); if (gs) gclid = gs.gclid || ''; }
+
+      // seg
+      var s = params.get('seg');
+      if (s) { seg = s; guardar('neopsy_seg', { seg: s }); }
+      else { var ss = leer('neopsy_seg'); if (ss) seg = ss.seg || ''; }
+
+      // utms
+      var claves = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'];
+      var hayUtm = false;
+      claves.forEach(function(k) { var v = params.get(k); if (v) { utms[k] = v; hayUtm = true; } });
+      if (hayUtm) guardar('neopsy_utms', { utms: utms });
+      else { var us = leer('neopsy_utms'); if (us && us.utms) utms = us.utms; }
+    } catch(e) {}
+
+    // Poblar hidden fields del form (mismo patrón que Origen)
+    var gclidInput = document.getElementById('track-gclid');
+    if (gclidInput) gclidInput.value = gclid;
+    var segInput = document.getElementById('track-seg');
+    if (segInput) segInput.value = seg;
+
+    // Registro de eventos de contacto — fire and forget
+    function registrarEvento(tipo) {
+      try {
+        var cargoEl = document.getElementById('rol');
+        var origenEl = document.getElementById('lead-origen');
+        fetch(SHEET_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: JSON.stringify({
+            tipo: tipo,
+            gclid: gclid,
+            seg: seg,
+            utm_source: utms.utm_source || '',
+            utm_medium: utms.utm_medium || '',
+            utm_campaign: utms.utm_campaign || '',
+            utm_term: utms.utm_term || '',
+            cargo: cargoEl ? cargoEl.value : '',
+            origen: origenEl ? origenEl.value : 'web',
+            pagina: window.location.pathname
+          })
+        });
+      } catch(e) {}
+    }
+    window.__registrarEventoLead = registrarEvento;
+
+    // WhatsApp: ref con últimos 8 chars del gclid + registro del clic
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a) {
+      if (gclid) {
+        try {
+          var url = new URL(a.href);
+          var texto = url.searchParams.get('text') || '';
+          url.searchParams.set('text', texto + ' [ref:' + gclid.slice(-8) + ']');
+          a.href = url.toString();
+        } catch(e) {}
+      }
+      a.addEventListener('click', function() { registrarEvento('whatsapp'); });
+    });
   })();
   </script>
 
