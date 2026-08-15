@@ -1209,8 +1209,9 @@
       if (gclid) {
         try {
           var url = new URL(a.href);
-          var texto = url.searchParams.get('text') || '';
-          url.searchParams.set('text', texto + ' [ref:' + gclid.slice(-8) + ']');
+          var texto = (url.searchParams.get('text') || '').replace(/\s+$/, '');
+          var sep = /\.$/.test(texto) ? ' ' : '. ';
+          url.searchParams.set('text', texto + sep + 'Mi código de consulta: ' + gclid.slice(-8));
           a.href = url.toString();
         } catch(e) {}
       }
