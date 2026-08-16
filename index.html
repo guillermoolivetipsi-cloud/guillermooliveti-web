@@ -1184,21 +1184,30 @@
       try {
         var cargoEl = document.getElementById('rol');
         var origenEl = document.getElementById('lead-origen');
+        var payload = {
+          tipo: tipo,
+          gclid: gclid,
+          seg: seg,
+          utm_source: utms.utm_source || '',
+          utm_medium: utms.utm_medium || '',
+          utm_campaign: utms.utm_campaign || '',
+          utm_term: utms.utm_term || '',
+          cargo: cargoEl ? cargoEl.value : '',
+          origen: origenEl ? origenEl.value : 'web',
+          pagina: window.location.pathname
+        };
+        if (tipo === 'form') {
+          var nombreEl = document.getElementById('nombre');
+          var emailEl = document.getElementById('email');
+          var telEl = document.getElementById('telefono');
+          payload.nombre = nombreEl ? nombreEl.value : '';
+          payload.email = emailEl ? emailEl.value : '';
+          payload.telefono = telEl ? telEl.value : '';
+        }
         fetch(SHEET_ENDPOINT, {
           method: 'POST',
           mode: 'no-cors',
-          body: JSON.stringify({
-            tipo: tipo,
-            gclid: gclid,
-            seg: seg,
-            utm_source: utms.utm_source || '',
-            utm_medium: utms.utm_medium || '',
-            utm_campaign: utms.utm_campaign || '',
-            utm_term: utms.utm_term || '',
-            cargo: cargoEl ? cargoEl.value : '',
-            origen: origenEl ? origenEl.value : 'web',
-            pagina: window.location.pathname
-          })
+          body: JSON.stringify(payload)
         });
       } catch(e) {}
     }
