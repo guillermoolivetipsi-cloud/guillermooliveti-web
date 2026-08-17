@@ -576,17 +576,17 @@
     var seg = (window.__neopsyTrack && window.__neopsyTrack.seg) || '';
     var variantes = {
       estres: {
-        h1: 'Llegás a todo, no disfrutás nada, y ya no recordás cuándo fue distinto.',
+        h1: 'Llegás a todo, no disfrutás nada, y ya no recordás cuándo fue <em>distinto</em>.',
         sub: 'Rendís, cumplís, resolvés, y el motor interno no se apaga nunca. Trabajo con profesionales con estrés laboral, ansiedad y burnout que quieren entender qué lo enciende, no solo bajar las revoluciones una semana.',
         chips: ['Estrés laboral', 'Ansiedad laboral', 'Burnout silencioso']
       },
       emprendedores: {
-        h1: 'Todo depende de vos. Eso pesa. Y no es fácil encontrar quien lo entienda.',
+        h1: 'Todo depende de vos. Eso <em>pesa</em>. Y no es fácil encontrar quien lo entienda.',
         sub: 'Psicólogo clínico, ex director de operaciones. 18 años en empresas antes de la clínica. Trabajo con emprendedores, empresarios y profesionales de alto rendimiento que sostienen números, gente y decisiones que nadie más puede tomar. Conozco ese contexto desde adentro.',
         chips: ['Autoexigencia', 'Dificultad para delegar', 'Toma de decisiones']
       },
       crecimiento: {
-        h1: 'No es que algo ande mal. Es que querés ir más lejos.',
+        h1: 'No es que algo ande mal. Es que querés ir <em>más lejos</em>.',
         sub: 'Para los que se hacen preguntas difíciles y no se conforman con respuestas fáciles. Un espacio de crecimiento personal para seguir descubriendo cómo pensás, qué te mueve y qué versión de vos está por construirse. Con profundidad clínica, para mirar las cosas de otra manera.',
         chips: ['Autosabotaje', 'Síndrome del impostor', 'Miedo al fracaso']
       }
@@ -595,7 +595,7 @@
     if (!v) return;
     try {
       var h1 = document.querySelector('.hero-c h1');
-      if (h1) h1.textContent = v.h1;
+      if (h1) h1.innerHTML = v.h1;
       var sub = document.querySelector('.hero-c-sub');
       if (sub) sub.textContent = v.sub;
       var lista = document.querySelector('.tags-c-list');
