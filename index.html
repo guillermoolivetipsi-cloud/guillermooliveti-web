@@ -3,6 +3,42 @@
 
 <head>
     <script>window.dataLayer = window.dataLayer || [];</script>
+    <script>
+    (function() {
+      var MAX_AGE = 90 * 24 * 60 * 60 * 1000; // 90 días
+      function leer(clave) {
+        try {
+          var raw = localStorage.getItem(clave);
+          if (!raw) return null;
+          var obj = JSON.parse(raw);
+          if (!obj || !obj.fecha || (Date.now() - obj.fecha) > MAX_AGE) {
+            localStorage.removeItem(clave);
+            return null;
+          }
+          return obj;
+        } catch(e) { return null; }
+      }
+      function guardar(clave, obj) {
+        try { obj.fecha = Date.now(); localStorage.setItem(clave, JSON.stringify(obj)); } catch(e) {}
+      }
+      var gclid = '', seg = '', utms = {};
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var g = params.get('gclid');
+        if (g) { gclid = g; guardar('neopsy_gclid', { gclid: g }); }
+        else { var gs = leer('neopsy_gclid'); if (gs) gclid = gs.gclid || ''; }
+        var s = params.get('seg');
+        if (s) { seg = s; guardar('neopsy_seg', { seg: s }); }
+        else { var ss = leer('neopsy_seg'); if (ss) seg = ss.seg || ''; }
+        var claves = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'];
+        var hayUtm = false;
+        claves.forEach(function(k) { var v = params.get(k); if (v) { utms[k] = v; hayUtm = true; } });
+        if (hayUtm) guardar('neopsy_utms', { utms: utms });
+        else { var us = leer('neopsy_utms'); if (us && us.utms) utms = us.utms; }
+      } catch(e) {}
+      window.__neopsyTrack = { gclid: gclid, seg: seg, utms: utms };
+    })();
+    </script>
     <style>
 #cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;border-top:1px solid #2a2a2a;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;z-index:9999;flex-wrap:wrap}
 #cookie-banner p{font-family:'Inter Tight',sans-serif;font-size:13px;color:#8a8279;line-height:1.6;margin:0;flex:1;min-width:220px}
@@ -535,6 +571,48 @@
     </div>
   </section>
 
+  <script>
+  (function() {
+    var seg = (window.__neopsyTrack && window.__neopsyTrack.seg) || '';
+    var variantes = {
+      estres: {
+        h1: 'Llegás a todo, no disfrutás nada, y ya no recordás cuándo fue distinto.',
+        sub: 'Rendís, cumplís, resolvés, y el motor interno no se apaga nunca. Trabajo con profesionales con estrés laboral, ansiedad y burnout que quieren entender qué lo enciende, no solo bajar las revoluciones una semana.',
+        chips: ['Estrés laboral', 'Ansiedad laboral', 'Burnout silencioso']
+      },
+      emprendedores: {
+        h1: 'Todo depende de vos. Eso pesa. Y no es fácil encontrar quien lo entienda.',
+        sub: 'Psicólogo clínico, ex director de operaciones. 18 años en empresas antes de la clínica. Trabajo con emprendedores, empresarios y profesionales de alto rendimiento que sostienen números, gente y decisiones que nadie más puede tomar. Conozco ese contexto desde adentro.',
+        chips: ['Autoexigencia', 'Dificultad para delegar', 'Toma de decisiones']
+      },
+      crecimiento: {
+        h1: 'No es que algo ande mal. Es que querés ir más lejos.',
+        sub: 'Para los que se hacen preguntas difíciles y no se conforman con respuestas fáciles. Un espacio de crecimiento personal para seguir descubriendo cómo pensás, qué te mueve y qué versión de vos está por construirse. Con profundidad clínica, para mirar las cosas de otra manera.',
+        chips: ['Autosabotaje', 'Síndrome del impostor', 'Miedo al fracaso']
+      }
+    };
+    var v = variantes[seg];
+    if (!v) return;
+    try {
+      var h1 = document.querySelector('.hero-c h1');
+      if (h1) h1.textContent = v.h1;
+      var sub = document.querySelector('.hero-c-sub');
+      if (sub) sub.textContent = v.sub;
+      var lista = document.querySelector('.tags-c-list');
+      if (lista) {
+        var frag = document.createDocumentFragment();
+        v.chips.forEach(function(nombre) {
+          var chips = lista.querySelectorAll('.tag-c');
+          for (var i = 0; i < chips.length; i++) {
+            if (chips[i].textContent.trim() === nombre) { frag.appendChild(chips[i]); break; }
+          }
+        });
+        lista.insertBefore(frag, lista.firstChild);
+      }
+    } catch(e) {}
+  })();
+  </script>
+
   <!-- PULL QUOTE -->
   <div class="quote-c">
     <span class="mark">"</span>
@@ -597,7 +675,7 @@
 
         <div class="stats-c" data-counters>
           <div class="stat-c"><div class="num"><span class="count" data-target="18">18</span><em>+</em></div><div class="lbl">Años en organizaciones</div></div>
-          <div class="stat-c"><div class="num"><span class="count" data-target="14">14</span></div><div class="lbl">Años liderando equipos</div></div>
+          <div class="stat-c"><div class="num"><span class="count" data-target="7">7</span></div><div class="lbl">Años como director operativo</div></div>
           <div class="stat-c"><div class="num"><span class="count" data-target="40">40</span><em>+</em></div><div class="lbl">Líderes acompañados</div></div>
           <div class="stat-c"><div class="num"><span class="count" data-target="2">2</span></div><div class="lbl">Carreras universitarias</div></div>
         </div>
@@ -838,10 +916,10 @@
         <div class="form-group">
           <label for="phone-number">Teléfono <span class="optional">(opcional)</span></label>
           <div class="phone-row">
-            <input type="tel" id="phone-number" class="phone-number-input" autocomplete="tel" placeholder="11 1234 5678">
+            <input type="tel" id="phone-number" class="phone-number-input" autocomplete="tel" placeholder="11 2345-6789">
           </div>
           <input type="hidden" name="telefono" id="telefono">
-          <span class="phone-hint">Sin el 0 ni el 15. Ej: 11 2345-6789</span>
+          <span class="phone-hint">Opcional. Si lo dejás, te respondo por WhatsApp, suele ser más rápido.</span>
         </div>
         <div class="form-group">
           <label for="mensaje">¿Qué te trajo por acá?</label>
@@ -1039,7 +1117,7 @@
           }
           phoneEl.classList.remove('phone-error');
           if (phoneHint) {
-            phoneHint.textContent = 'Ingresá tu número sin el código de país ni el 0 inicial';
+            phoneHint.textContent = 'Opcional. Si lo dejás, te respondo por WhatsApp, suele ser más rápido.';
             phoneHint.classList.remove('phone-hint-error');
           }
           tel.value = phoneEl._iti ? phoneEl._iti.getNumber() : phoneEl.value.trim();
@@ -1133,45 +1211,10 @@
   <script>
   (function() {
     var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwzrPPT3E4kAEQZWMeXh3BKFJG1su7oTfDuJaTCDnCewV1xkVS9j8nTFQIs1D1QK5YYBA/exec';
-    var MAX_AGE = 90 * 24 * 60 * 60 * 1000; // 90 días
 
-    function leer(clave) {
-      try {
-        var raw = localStorage.getItem(clave);
-        if (!raw) return null;
-        var obj = JSON.parse(raw);
-        if (!obj || !obj.fecha || (Date.now() - obj.fecha) > MAX_AGE) {
-          localStorage.removeItem(clave);
-          return null;
-        }
-        return obj;
-      } catch(e) { return null; }
-    }
-    function guardar(clave, obj) {
-      try { obj.fecha = Date.now(); localStorage.setItem(clave, JSON.stringify(obj)); } catch(e) {}
-    }
-
-    var gclid = '', seg = '', utms = {};
-    try {
-      var params = new URLSearchParams(window.location.search);
-
-      // gclid: URL pisa lo guardado
-      var g = params.get('gclid');
-      if (g) { gclid = g; guardar('neopsy_gclid', { gclid: g }); }
-      else { var gs = leer('neopsy_gclid'); if (gs) gclid = gs.gclid || ''; }
-
-      // seg
-      var s = params.get('seg');
-      if (s) { seg = s; guardar('neopsy_seg', { seg: s }); }
-      else { var ss = leer('neopsy_seg'); if (ss) seg = ss.seg || ''; }
-
-      // utms
-      var claves = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'];
-      var hayUtm = false;
-      claves.forEach(function(k) { var v = params.get(k); if (v) { utms[k] = v; hayUtm = true; } });
-      if (hayUtm) guardar('neopsy_utms', { utms: utms });
-      else { var us = leer('neopsy_utms'); if (us && us.utms) utms = us.utms; }
-    } catch(e) {}
+    // Captura y persistencia resueltas en el head (window.__neopsyTrack)
+    var track = window.__neopsyTrack || { gclid: '', seg: '', utms: {} };
+    var gclid = track.gclid || '', seg = track.seg || '', utms = track.utms || {};
 
     // Poblar hidden fields del form (mismo patrón que Origen)
     var gclidInput = document.getElementById('track-gclid');
@@ -1200,9 +1243,13 @@
           var nombreEl = document.getElementById('nombre');
           var emailEl = document.getElementById('email');
           var telEl = document.getElementById('telefono');
+          var paisEl = document.getElementById('pais');
+          var motivoEl = document.getElementById('mensaje');
           payload.nombre = nombreEl ? nombreEl.value : '';
           payload.email = emailEl ? emailEl.value : '';
           payload.telefono = telEl ? telEl.value : '';
+          payload.pais = paisEl ? paisEl.value : '';
+          payload.motivo = motivoEl ? motivoEl.value : '';
         }
         fetch(SHEET_ENDPOINT, {
           method: 'POST',
@@ -1272,7 +1319,7 @@
           });
           phoneInput._iti = iti;
           const hint = document.querySelector('.phone-hint');
-          if (hint) hint.textContent = 'Ingresá tu número sin el código de país ni el 0 inicial';
+          if (hint) hint.textContent = 'Opcional. Si lo dejás, te respondo por WhatsApp, suele ser más rápido.';
         };
         document.head.appendChild(s);
       }
