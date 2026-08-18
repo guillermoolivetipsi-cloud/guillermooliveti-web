@@ -1260,14 +1260,17 @@
     }
     window.__registrarEventoLead = registrarEvento;
 
-    // WhatsApp: ref con últimos 8 chars del gclid + registro del clic
+    // WhatsApp: ref con la parte variable del gclid (pos 40 a 47) + registro del clic.
+    // Los gclid de Search comparten prefijo y sufijo; los últimos 8 chars son
+    // "EALw_wcB" para todos, por eso se toma el tramo variable del medio.
+    var refCodigo = gclid.length >= 47 ? gclid.substr(39, 8) : gclid.slice(-8);
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a) {
       if (gclid) {
         try {
           var url = new URL(a.href);
           var texto = (url.searchParams.get('text') || '').replace(/\s+$/, '');
           var sep = /\.$/.test(texto) ? ' ' : '. ';
-          url.searchParams.set('text', texto + sep + 'Mi código de consulta: ' + gclid.slice(-8));
+          url.searchParams.set('text', texto + sep + 'Mi código de consulta: ' + refCodigo);
           a.href = url.toString();
         } catch(e) {}
       }
