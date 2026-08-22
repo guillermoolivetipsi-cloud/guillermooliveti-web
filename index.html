@@ -578,22 +578,31 @@
       estres: {
         h1: 'Terapia para el estrés laboral, con alguien que conoce ese mundo desde <em>adentro</em>.',
         sub: 'Soy psicólogo clínico e ingeniero en sistemas. Pasé 18 años en el mundo corporativo, 7 como director de operaciones, y acompañé a más de 40 líderes. Conozco ese mundo: los objetivos trimestrales, las reuniones que se encadenan, la cabeza que sigue trabajando a la noche. Hoy atiendo online a profesionales que atraviesan estrés laboral, ansiedad y autoexigencia: gente que funciona, cumple y sostiene, y empieza a notar que el modo actual tiene un límite.',
-        chips: ['Estrés laboral', 'Ansiedad laboral', 'Burnout silencioso']
+        chips: ['Estrés laboral', 'Ansiedad laboral', 'Burnout silencioso'],
+        title: 'Terapia para el Estrés Laboral | Guillermo Oliveti, Psicólogo Online',
+        meta: 'Psicólogo clínico con 18 años en el mundo corporativo, 7 como director. Terapia online para profesionales con estrés laboral, ansiedad y autoexigencia.'
       },
       emprendedores: {
         h1: 'Terapia para emprendedores y <em>empresarios</em>.',
         sub: 'Soy psicólogo clínico e ingeniero en sistemas. Antes de dedicarme de lleno a la clínica fui director de operaciones durante 7 años: armé equipos, respondí por resultados y sé lo que es que buena parte de las decisiones pasen por vos. Atiendo online a emprendedores y empresarios, con un trabajo más profundo que el coaching: psicología clínica con dirección, sobre lo que hay detrás de cómo emprendés.',
-        chips: ['Autoexigencia', 'Dificultad para delegar', 'Toma de decisiones']
+        chips: ['Autoexigencia', 'Dificultad para delegar', 'Toma de decisiones'],
+        title: 'Terapia para Emprendedores y Empresarios | Guillermo Oliveti, Psicólogo Online',
+        meta: 'Psicólogo clínico, y antes director de operaciones durante 7 años. Terapia online para emprendedores y empresarios. Psicología clínica con dirección.'
       },
       crecimiento: {
         h1: 'Psicología para tu desarrollo personal y <em>profesional</em>.',
         sub: 'Soy psicólogo clínico e ingeniero en sistemas, con 18 años de carrera corporativa. Cambié de carrera, de rol y de país, y sé que crecer casi nunca es lineal. Atiendo online a adultos que atraviesan un cambio laboral, una transición o la búsqueda de algo más propio: un espacio para entenderte mejor y elegir distinto.',
-        chips: ['Autosabotaje', 'Síndrome del impostor', 'Miedo al fracaso']
+        chips: ['Autosabotaje', 'Síndrome del impostor', 'Miedo al fracaso'],
+        title: 'Psicólogo para el Desarrollo Personal y Profesional | Guillermo Oliveti',
+        meta: 'Terapia online para adultos en momentos de cambio laboral o crecimiento personal. Psicología clínica con dirección: entenderte mejor y elegir distinto.'
       }
     };
     var v = variantes[seg];
     if (!v) return;
     try {
+      if (v.title) document.title = v.title;
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && v.meta) metaDesc.setAttribute('content', v.meta);
       var h1 = document.querySelector('.hero-c h1');
       if (h1) h1.innerHTML = v.h1;
       var sub = document.querySelector('.hero-c-sub');
