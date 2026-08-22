@@ -6,7 +6,7 @@ Documento de referencia para adaptar este sitio a un nuevo cliente. Leer antes d
 
 ## Stack técnico
 
-- **HTML/CSS/JS estático** — un solo `index.html` + `style.css`
+- **HTML/CSS/JS estático** — un solo `index.html` (CSS y JS inline, sin archivos externos)
 - **Deploy**: Vercel (conectado a GitHub, auto-deploy en cada push a `main`)
 - **DNS**: GoDaddy (dominio del cliente apuntado a Vercel vía CNAME)
 - **Repo base**: este mismo repositorio — duplicarlo en GitHub para cada cliente nuevo
@@ -51,7 +51,7 @@ Documento de referencia para adaptar este sitio a un nuevo cliente. Leer antes d
 
 ## Colores — cómo cambiar el look
 
-El sitio usa variables CSS centralizadas en `style.css` (primeras ~30 líneas). Cambiar estas variables cambia todo el sitio:
+El sitio usa variables CSS centralizadas en el bloque `<style>` del `<head>` de `index.html` (el `:root` al principio). Cambiar estas variables cambia todo el sitio:
 
 ```css
 --ink: #1a1a18;          /* texto principal */
@@ -112,7 +112,7 @@ Para un cliente nuevo: mantener los anchors que apliquen, renombrar o eliminar l
 ## Deploy — paso a paso para cliente nuevo
 
 1. Duplicar este repo en GitHub (fork o repo nuevo con los archivos)
-2. Editar `index.html` y `style.css` con el contenido del cliente
+2. Editar `index.html` (contenido y estilos inline) con el contenido del cliente
 3. Crear proyecto en Vercel → conectar al nuevo repo → auto-deploy configurado
 4. En GoDaddy (o el DNS del cliente): agregar CNAME del dominio apuntando a Vercel
 5. En Vercel: agregar el dominio custom del cliente
@@ -125,7 +125,6 @@ Para un cliente nuevo: mantener los anchors que apliquen, renombrar o eliminar l
 
 | Archivo | Qué contiene |
 |---------|-------------|
-| `index.html` | Todo el HTML, scripts inline, inicialización de integraciones |
-| `style.css` | Variables de color + todos los estilos |
+| `index.html` | Todo el HTML, variables de color y estilos inline, scripts inline, inicialización de integraciones |
 | `vercel.json` | Headers de seguridad + Content Security Policy |
 | `images/` | Fotos del profesional (reemplazar todas para cliente nuevo) |
